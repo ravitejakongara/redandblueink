@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal: Red &amp; Blue Ink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14213D; --navy-2:#1D3557; --red:#E63946; --red-deep:#AD2831;
+    --steel:#457B9D; --wash:#A8DADC; --paper:#EFF2EC; --card:#FFFFFF;
+    --ink-text:#1B1E27; --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{overflow-x:hidden;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink-text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:600;margin:0 0 .4em;letter-spacing:-0.02em;}
+  p{margin:0 0 1em;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--steel));display:inline-block;}
+  a.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-decoration:none;padding:14px 24px;border-radius:3px;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;}
+  a.btn-red{background:var(--red);color:#fff;}
+  a.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);}
+  a.btn-outline{border:1.5px solid var(--navy);color:var(--navy);background:transparent;}
+  a.btn-outline:hover{background:var(--navy);color:var(--paper);transform:translateY(-2px);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--red); outline-offset:2px;}
+
+  .photo-frame{position:relative;overflow:hidden;border-radius:4px;background:var(--navy);}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--red),var(--steel));opacity:.17;mix-blend-mode:multiply;pointer-events:none;}
+
+  .ink-divider{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 0 8px;}
+  .ink-divider .dot{width:9px;height:9px;border-radius:50%;}
+  .ink-divider .dot.r{background:var(--red);}
+  .ink-divider .dot.b{background:var(--steel);margin-left:-4px;mix-blend-mode:multiply;}
+  .ink-divider .line{width:48px;height:1px;background:rgba(20,33,61,.16);}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(239,242,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(20,33,61,.1);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:var(--max);margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);}
+  .brand-mark{width:28px;height:28px;flex:none;}
+  .brand-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;}
+  nav.links{display:flex;gap:28px;align-items:center;}
+  nav.links a{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.02em;text-decoration:none;color:var(--navy-2);position:relative;padding:2px 0;}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;background:var(--red);transition:width .25s ease;}
+  nav.links a:hover::after, nav.links a.active::after{width:100%;}
+  nav.links a.active{color:var(--navy);}
+  .nav-cta{display:flex;align-items:center;gap:20px;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:4px 0;}
+
+  .page-head{padding:72px 0 56px;border-bottom:1px solid rgba(20,33,61,.12);}
+  .page-head h1{font-size:clamp(32px,4.4vw,50px);color:var(--navy);max-width:16ch;line-height:1.08;}
+  .page-head .desc{font-size:16.5px;color:var(--navy-2);max-width:52ch;margin-top:14px;}
+  .page-head .eyebrow{color:var(--navy-2);margin-bottom:16px;}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+  section{padding:64px 0 96px;}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .post-list{display:flex;flex-direction:column;border-top:1px solid rgba(20,33,61,.14);}
+  .post-card{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid rgba(20,33,61,.14);text-decoration:none;color:inherit;align-items:center;}
+  .post-thumb{aspect-ratio:4/3;}
+  .post-thumb img{transition:transform .5s ease;}
+  .post-card:hover .post-thumb img{transform:scale(1.05);}
+  .post-card{border-left:0 solid transparent;padding-left:0;transition:border-color .3s ease,padding-left .3s ease;}
+  .post-card:hover{border-left:3px solid var(--red);padding-left:16px;}
+  .post-meta{font-family:'Space Mono',monospace;font-size:11px;color:var(--navy-2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;}
+  .post-title{font-size:22px;color:var(--navy);margin-bottom:8px;transition:color .2s ease;}
+  .post-card:hover .post-title{color:var(--red);}
+  .post-excerpt{font-size:14.5px;color:var(--navy-2);margin:0;max-width:60ch;}
+  .more-note{font-family:'Space Mono',monospace;font-size:12.5px;color:var(--navy-2);padding:28px 0 0;text-align:center;}
+  @media (max-width:700px){.post-card{grid-template-columns:1fr;} .post-thumb{aspect-ratio:16/9;}}
+
+  footer{background:var(--navy);color:#C7CEDB;padding:60px 0 28px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;}
+  .foot-brand .brand-name{color:#fff;}
+  .foot-brand p{font-size:13.5px;color:#9FA9C0;max-width:32ch;margin-top:12px;}
+  footer h5{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8792AC;margin:0 0 16px;}
+  footer ul{list-style:none;margin:0;padding:0;}
+  footer li{margin-bottom:10px;}
+  footer a{text-decoration:none;font-size:14px;color:#DCE1EC;}
+  footer a:hover{color:var(--wash);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'Space Mono',monospace;font-size:11px;color:#7A85A0;}
+  @media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.foot-grid{grid-template-columns:1fr;gap:28px;}}
+
+  @media (max-width:420px){.wrap{padding:0 20px;} .nav{padding:16px 20px;}}
+  @media (max-width:760px){
+    nav.links,.nav-cta .btn-outline{display:none;}
+    .menu-toggle{display:block;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="../index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="20" r="12" fill="#E63946"/>
+        <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
+      </svg>
+      <span class="brand-name">Red &amp; Blue Ink</span>
+    </a>
+    <nav class="links">
+      <a href="../index.html">Home</a>
+      <a href="index.html" class="active">Journal</a>
+      <a href="../about.html">About Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="../about.html" class="btn btn-outline">About Us</a>
+      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">The Journal</span>
+      <h1>Field notes for people building something.</h1>
+      <p class="desc">Ideas, tested one at a time. No hype, just what actually worked and what didn't.</p>
+    </div>
+  </div>
+
+  <div class="ink-divider" aria-hidden="true" style="padding-top:36px;"><span class="line"></span><span class="dot r"></span><span class="dot b"></span><span class="line"></span></div>
+
+  <section>
+    <div class="wrap">
+      <div class="post-list reveal">
+        <a href="how-to-find-a-business-idea-that-actually-works.html" class="post-card">
+          <div class="photo-frame post-thumb">
+            <img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=70&amp;w=800&amp;auto=format&amp;fit=crop" alt="Person writing in a notebook" loading="lazy">
+          </div>
+          <div>
+            <div class="post-meta">Journal · 8 min read</div>
+            <h3 class="post-title">How to Find a Business Idea That Actually Works</h3>
+            <p class="post-excerpt">Most people hesitate for one of two reasons: they don't know where to begin, or they have too many ideas to choose from. A field guide to where ideas actually come from, and how to test one before you build it.</p>
+          </div>
+        </a>
+      </div>
+      <p class="more-note">More posts coming soon.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="../index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="20" r="12" fill="#E63946"/>
+            <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
+          </svg>
+          <span class="brand-name">Red &amp; Blue Ink</span>
+        </a>
+        <p>A tested path from "I have an idea" to "I know if it's worth building."</p>
+      </div>
+      <div>
+        <h5>Read</h5>
+        <ul>
+          <li><a href="index.html">The Journal</a></li>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Red &amp; Blue Ink</span>
+      <span>Bold action. Clear thinking.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.querySelector('nav.links');
+  if(toggle){
+    toggle.addEventListener('click', ()=>{
+      const open = links.style.display === 'flex';
+      links.style.display = open ? 'none' : 'flex';
+      links.style.cssText += open ? '' : 'position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 32px;border-bottom:1px solid rgba(20,33,61,.1);gap:16px;';
+    });
+  }
+</script>
+
+</body>
+</html>
