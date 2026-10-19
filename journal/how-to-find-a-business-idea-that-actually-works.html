@@ -2,418 +2,276 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Find a Business Idea That Actually Works: Red &amp; Blue Ink</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Find a Business Idea That Actually Works | Red &amp; Blue Ink</title>
+<meta name="description" content="Where business ideas come from, how to test one before you build it, and five filters to decide which idea is worth betting on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#14213D; --navy-2:#1D3557; --red:#E63946; --red-deep:#AD2831;
-    --steel:#457B9D; --wash:#A8DADC; --paper:#EFF2EC; --card:#FFFFFF;
-    --ink-text:#1B1E27; --max:1180px; --article-max:760px;
+  :root {
+    --paper:#F7F8FC; --surface:#FFFFFF; --ink:#12172E; --muted:#586078; --line:#DCE0EB;
+    --red:#D7261E; --blue:#1F4FE0; --yellow:#FFC23D; --green:#12A579; --violet:#7A4DFF; --pink:#FF6FA8;
+    --tint-blue:#E6ECFF; --tint-yellow:#FFF3CF; --tint-pink:#FFE5EF; --dark-text:#12172E;
+    --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+    --wrap:1120px; color-scheme:light; box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
   }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{overflow-x:hidden;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink-text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
-  img,svg{display:block;max-width:100%;}
-  a{color:inherit;}
-  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:600;margin:0 0 .4em;letter-spacing:-0.02em;}
-  p{margin:0 0 1em;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
-  .wrap-narrow{max-width:var(--article-max);margin:0 auto;padding:0 32px;}
-  .eyebrow{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;}
-  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--steel));display:inline-block;}
-  a.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-decoration:none;padding:14px 24px;border-radius:3px;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;}
-  a.btn-red{background:var(--red);color:#fff;}
-  a.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);}
-  a.btn-outline{border:1.5px solid var(--navy);color:var(--navy);background:transparent;}
-  a.btn-outline:hover{background:var(--navy);color:var(--paper);transform:translateY(-2px);}
-  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--red); outline-offset:2px;}
-
-  .photo-frame{position:relative;overflow:hidden;border-radius:4px;background:var(--navy);}
-  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
-  .photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--red),var(--steel));opacity:.17;mix-blend-mode:multiply;pointer-events:none;}
-
-  .ink-divider{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 0 8px;}
-  .ink-divider .dot{width:9px;height:9px;border-radius:50%;}
-  .ink-divider .dot.r{background:var(--red);}
-  .ink-divider .dot.b{background:var(--steel);margin-left:-4px;mix-blend-mode:multiply;}
-  .ink-divider .line{width:48px;height:1px;background:rgba(20,33,61,.16);}
-
-  header.site{position:sticky;top:0;z-index:50;background:rgba(239,242,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(20,33,61,.1);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:var(--max);margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);}
-  .brand-mark{width:28px;height:28px;flex:none;}
-  .brand-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;}
-  nav.links{display:flex;gap:28px;align-items:center;}
-  nav.links a{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.02em;text-decoration:none;color:var(--navy-2);position:relative;padding:2px 0;}
-  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;background:var(--red);transition:width .25s ease;}
-  nav.links a:hover::after, nav.links a.active::after{width:100%;}
-  nav.links a.active{color:var(--navy);}
-  .nav-cta{display:flex;align-items:center;gap:20px;}
-  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
-  .menu-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:4px 0;}
-
-  .back-link{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:12.5px;color:var(--navy-2);text-decoration:none;margin:32px 0 24px;}
-  .back-link:hover{color:var(--red);}
-
-  .article-head{padding-bottom:32px;}
-  .article-head h1{font-size:clamp(30px,4.2vw,46px);color:var(--navy);line-height:1.1;max-width:18ch;}
-  .article-meta{font-family:'Space Mono',monospace;font-size:12px;color:var(--navy-2);text-transform:uppercase;letter-spacing:.04em;margin:16px 0 0;}
-
-  .article-hero{aspect-ratio:16/8;margin:0 0 48px;}
-  @media (max-width:600px){.article-hero{aspect-ratio:4/3;margin:0 0 32px;}}
-
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-
-  section{padding:0 0 96px;}
-
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
-
-  .article-intro{font-size:17.5px;color:var(--navy-2);max-width:66ch;margin-bottom:8px;}
-  .article-intro::first-letter{
-    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3.4em;line-height:.78;
-    float:left;margin:.03em .09em 0 0;color:var(--red);
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0D1122; --surface:#151A31; --ink:#EDEFF7; --muted:#9CA3BE; --line:#262C48;
+      --red:#F0473D; --blue:#5B7CFF; --yellow:#FFCB57; --green:#2CC995; --violet:#9572FF; --pink:#FF85B6;
+      --tint-blue:#16204A; --tint-yellow:#2A2414; --tint-pink:#2E1626; color-scheme:dark;
+    }
   }
-
-  .step{padding:36px 0;border-top:1px solid rgba(20,33,61,.14);}
-  .wrap-narrow .step:last-of-type{border-bottom:1px solid rgba(20,33,61,.14);}
-  .step-num{font-family:'Space Mono',monospace;font-size:12px;color:var(--red);letter-spacing:.05em;margin-bottom:10px;}
-  .step h2{font-size:22px;color:var(--navy);margin-bottom:12px;}
-  .step p{color:var(--navy-2);font-size:16px;}
-  .step ul{margin:0 0 1em;padding-left:4px;color:var(--navy-2);font-size:16px;list-style:none;}
-  .step li{margin-bottom:10px;padding-left:22px;position:relative;}
-  .step li::before{
-    content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;
-    background:linear-gradient(135deg,var(--red),var(--steel));
+  :root[data-theme="dark"] {
+    --paper:#0D1122; --surface:#151A31; --ink:#EDEFF7; --muted:#9CA3BE; --line:#262C48;
+    --red:#F0473D; --blue:#5B7CFF; --yellow:#FFCB57; --green:#2CC995; --violet:#9572FF; --pink:#FF85B6;
+    --tint-blue:#16204A; --tint-yellow:#2A2414; --tint-pink:#2E1626; color-scheme:dark;
   }
+  html { scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+  *,*::before,*::after { box-sizing:inherit; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body::before { content:""; position:fixed; inset:0 0 auto; z-index:10; height:env(safe-area-inset-top,0px); background:var(--paper); }
+  a { color:inherit; }
+  :focus-visible { outline:3px solid var(--blue); outline-offset:3px; border-radius:4px; }
+  .wrap { max-width:var(--wrap); margin:0 auto; padding:0 clamp(20px,5vw,48px); }
+  .narrow { max-width:760px; }
+  .c-business { --c:var(--red); --c-text:#fff; --c-tint:var(--tint-pink); }
+  .c-marketing { --c:var(--yellow); --c-text:var(--dark-text); --c-tint:var(--tint-yellow); }
+  .c-finance { --c:var(--green); --c-text:#fff; --c-tint:color-mix(in srgb, var(--green) 14%, var(--paper)); }
+  .c-productivity { --c:var(--violet); --c-text:#fff; --c-tint:color-mix(in srgb, var(--violet) 14%, var(--paper)); }
+  .c-plain { --c:var(--blue); --c-text:#fff; --c-tint:var(--tint-blue); }
+  .site-header { position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--paper); border-bottom:1px solid var(--line); }
+  .site-header::before { content:""; display:block; height:5px; background:linear-gradient(90deg,var(--red) 0 25%,var(--yellow) 25% 50%,var(--green) 50% 75%,var(--violet) 75% 100%); }
+  .site-header .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-family:var(--display); font-weight:800; font-size:1.2rem; letter-spacing:-0.01em; }
+  .brand svg { width:36px; height:36px; flex:none; }
+  .nav-link { text-decoration:none; font-weight:600; padding:8px 16px; border-radius:999px; border:2px solid var(--line); }
+  .nav-link:hover { border-color:var(--ink); }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; border-radius:999px; font-weight:600; text-decoration:none; border:2px solid var(--ink); background:var(--surface); color:var(--ink); }
+  .btn:hover { background:var(--yellow); border-color:var(--yellow); color:var(--dark-text); }
+  .page-hero { background:var(--c-tint); padding:clamp(44px,7vw,80px) 0; position:relative; overflow:hidden; }
+  .page-hero::after { content:""; position:absolute; width:clamp(140px,22vw,280px); aspect-ratio:1; border-radius:50%; background:var(--c); right:-5%; top:-35%; }
+  .page-hero .wrap { position:relative; z-index:1; }
+  .crumb { font-size:0.92rem; color:var(--muted); margin:0 0 14px; }
+  .crumb a { text-decoration:none; } .crumb a:hover { text-decoration:underline; }
+  .page-hero h1 { font-family:var(--display); font-weight:800; font-size:clamp(2.4rem,6vw,4.2rem); line-height:1; letter-spacing:-0.035em; margin:0 0 14px; }
+  .page-hero p.lead { font-size:clamp(1.05rem,1.8vw,1.22rem); color:var(--muted); margin:0; max-width:38em; }
+  main section { padding:clamp(44px,7vw,80px) 0; }
+  .section-title { font-family:var(--display); font-weight:800; font-size:clamp(1.5rem,3vw,2rem); letter-spacing:-0.025em; line-height:1.1; margin:0 0 20px; }
+  .empty { border:2px dashed var(--line); border-radius:20px; padding:clamp(28px,4vw,44px); }
+  .empty h3 { font-family:var(--display); font-size:1.4rem; margin:0 0 8px; letter-spacing:-0.015em; }
+  .empty p { color:var(--muted); margin:0 0 20px; max-width:34em; }
+  .post-list { list-style:none; margin:0; padding:0; border-top:2px solid var(--ink); }
+  .post-list li { border-bottom:1px solid var(--line); }
+  .post-list a { display:block; padding:20px 0; text-decoration:none; }
+  .post-list h3 { font-family:var(--display); font-weight:600; font-size:1.35rem; margin:0 0 4px; letter-spacing:-0.015em; }
+  .post-list small { color:var(--muted); }
+  .post-list a:hover h3 { text-decoration:underline; text-underline-offset:4px; }
+  .tag { display:inline-block; padding:3px 12px; border-radius:999px; background:var(--c); color:var(--c-text); font-size:0.82rem; font-weight:600; margin-right:8px; }
+  .others { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:760px) { .others { grid-template-columns:1fr; } }
+  .others a { display:block; padding:20px; border-radius:18px; background:var(--c); color:var(--c-text); text-decoration:none; font-family:var(--display); font-weight:800; font-size:1.3rem; transition:transform .2s; }
+  .others a span { display:block; font-family:var(--body); font-weight:400; font-size:0.95rem; opacity:.9; margin-top:4px; }
+  .others a:hover { transform:translateY(-3px); }
+  .prose { max-width:42em; }
+  .prose h2 { font-family:var(--display); font-weight:800; font-size:1.45rem; letter-spacing:-0.02em; line-height:1.2; margin:2.2em 0 0.5em; }
+  .prose h2:first-child { margin-top:0; }
+  .prose p, .prose li { color:var(--ink); }
+  .prose ul { padding-left:1.2em; }
+  .prose li { margin-bottom:0.4em; }
+  .prose a { color:var(--blue); }
+  .updated { color:var(--muted); font-size:0.95rem; margin:14px 0 0; }
+  .contact-card { background:var(--surface); border:2px solid var(--line); border-radius:22px; padding:clamp(24px,4vw,40px); }
+  .contact-card .email { font-family:var(--display); font-weight:800; font-size:clamp(1.4rem,3.4vw,2.2rem); letter-spacing:-0.02em; color:var(--blue); text-decoration:none; word-break:break-word; }
+  .contact-card .email:hover { text-decoration:underline; }
+  .site-footer { background:var(--ink); color:var(--paper); padding:clamp(44px,6vw,64px) 0 28px; }
+  .footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px; }
+  @media (max-width:760px) { .footer-grid { grid-template-columns:1fr; } }
+  .footer-grid p { color:color-mix(in srgb,var(--paper) 70%,transparent); margin:12px 0 0; max-width:26em; font-size:0.95rem; }
+  .footer-grid h4 { font-family:var(--display); font-size:1.05rem; margin:0 0 12px; }
+  .footer-grid ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-grid ul a { text-decoration:none; color:color-mix(in srgb,var(--paper) 78%,transparent); }
+  .footer-grid ul a:hover { color:var(--yellow); }
+  .mail { display:inline-block; margin-top:4px; font-weight:600; color:var(--yellow); text-decoration:none; }
+  .mail:hover { text-decoration:underline; }
+  .copy { border-top:1px solid color-mix(in srgb,var(--paper) 18%,transparent); margin-top:40px; padding-top:20px; font-size:0.88rem; color:color-mix(in srgb,var(--paper) 60%,transparent); }
 
-  .pull-quote{position:relative;margin:20px 0 0;padding:18px 22px 18px 46px;background:var(--wash);border-left:3px solid var(--steel);font-family:'Space Grotesk',sans-serif;font-size:15px;color:var(--navy);}
-  .pull-quote::before{
-    content:"\201C";position:absolute;left:12px;top:2px;
-    font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;line-height:1;
-    color:var(--red);opacity:.55;
-  }
-  .pull-quote cite{display:block;margin-top:8px;font-family:'Space Mono',monospace;font-style:normal;font-size:11px;color:var(--navy-2);text-transform:uppercase;letter-spacing:.04em;}
-
-  .stage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px;}
-  .stage-card{background:var(--card);border:1px solid rgba(20,33,61,.1);padding:16px;}
-  .stage-card .sc-label{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--red);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;}
-  .stage-card p{font-size:13.5px;color:var(--navy-2);margin:0;}
-
-  .together{background:var(--navy);color:var(--paper);margin-top:36px;padding:44px 36px;}
-  .together h2{color:#fff;font-size:23px;}
-  .together .intersect{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 26px;}
-  .intersect .ix{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:16px;}
-  .intersect .ix .ix-label{font-family:'Space Mono',monospace;font-size:10px;color:var(--wash);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;}
-  .intersect .ix p{font-size:13.5px;color:#DCE1EC;margin:0;}
-  .filters{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
-  .filters .f-item{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:#DCE1EC;}
-  .filters .f-item .fx{flex:none;width:20px;height:20px;border:1.5px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:10px;color:var(--red);}
-
-  .article-foot{border-top:1px solid rgba(20,33,61,.14);padding-top:32px;margin-top:48px;}
-  .article-foot p{color:var(--navy-2);font-size:14.5px;}
-
-  @media (min-width:640px){.stage-grid{grid-template-columns:repeat(4,1fr);} .together .intersect{grid-template-columns:repeat(4,1fr);}}
-  @media (max-width:600px){.together{padding:32px 22px;}}
-  @media (max-width:420px){.stage-grid{grid-template-columns:1fr;} .together .intersect{grid-template-columns:1fr;}}
-
-  footer{background:var(--navy);color:#C7CEDB;padding:60px 0 28px;}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;max-width:var(--max);margin-left:auto;margin-right:auto;}
-  .foot-brand .brand-name{color:#fff;}
-  .foot-brand p{font-size:13.5px;color:#9FA9C0;max-width:32ch;margin-top:12px;}
-  footer h5{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8792AC;margin:0 0 16px;}
-  footer ul{list-style:none;margin:0;padding:0;}
-  footer li{margin-bottom:10px;}
-  footer a{text-decoration:none;font-size:14px;color:#DCE1EC;}
-  footer a:hover{color:var(--wash);}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'Space Mono',monospace;font-size:11px;color:#7A85A0;max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px;}
-  @media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;padding:0 32px;}}
-  @media (max-width:520px){.foot-grid{grid-template-columns:1fr;gap:28px;}}
-
-  @media (max-width:420px){.wrap-narrow{padding:0 20px;} .nav{padding:16px 20px;}}
-  @media (max-width:760px){
-    nav.links,.nav-cta .btn-outline{display:none;}
-    .menu-toggle{display:block;}
-  }
-  
+  .art-hero { background:var(--tint-pink); padding:clamp(40px,6vw,72px) 0 clamp(36px,5vw,56px); position:relative; overflow:hidden; }
+  .art-hero::after { content:""; position:absolute; width:clamp(160px,24vw,320px); aspect-ratio:1; border-radius:50%; background:var(--red); right:-6%; top:-30%; }
+  .art-hero::before { content:""; position:absolute; width:clamp(70px,9vw,120px); aspect-ratio:1; border-radius:50%; background:var(--blue); right:14%; bottom:-40px; }
+  .art-hero .wrap { position:relative; z-index:1; }
+  .art-hero h1 { font-family:var(--display); font-weight:800; font-size:clamp(2.2rem,5.6vw,4rem); line-height:1.02; letter-spacing:-0.035em; margin:14px 0 16px; max-width:15em; }
+  .art-meta { display:flex; gap:12px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:0.95rem; }
+  .art-cover { margin:clamp(28px,4vw,44px) auto 0; max-width:960px; padding:0 clamp(20px,5vw,48px); }
+  .art-cover img { display:block; width:100%; aspect-ratio:16/8; object-fit:cover; border-radius:24px; box-shadow:10px 10px 0 var(--yellow); }
+  .article { max-width:720px; margin:0 auto; padding:clamp(36px,6vw,64px) clamp(20px,5vw,48px) 0; font-size:1.13rem; line-height:1.75; }
+  .article > p, .article li { color:var(--ink); }
+  .article p { margin:0 0 1.15em; }
+  .article .lede { font-size:clamp(1.2rem,2vw,1.35rem); line-height:1.6; font-weight:500; }
+  .article ul, .article ol { padding-left:1.2em; margin:0 0 1.2em; }
+  .article li { margin-bottom:0.55em; }
+  .article a { color:var(--blue); text-underline-offset:3px; }
+  .sec { padding:0 !important; margin-top:clamp(48px,7vw,72px); --c:var(--red); --c-text:#fff; }
+  .sec:nth-of-type(5n+2) { --c:var(--yellow); --c-text:var(--dark-text); }
+  .sec:nth-of-type(5n+3) { --c:var(--green); }
+  .sec:nth-of-type(5n+4) { --c:var(--blue); }
+  .sec:nth-of-type(5n+5) { --c:var(--violet); }
+  .sec-head { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+  .num { flex:none; width:46px; height:46px; border-radius:14px; background:var(--c); color:var(--c-text); display:grid; place-items:center; font-family:var(--display); font-weight:800; font-size:1.15rem; }
+  .kicker { color:var(--muted); font-size:0.95rem; font-weight:600; }
+  .article h2 { font-family:var(--display); font-weight:800; font-size:clamp(1.6rem,3.4vw,2.2rem); line-height:1.1; letter-spacing:-0.025em; margin:0 0 18px; }
+  .pull { margin:36px 0; padding:clamp(24px,4vw,34px); border-radius:22px; background:var(--qc,var(--red)); color:#fff; }
+  .pull.blue { --qc:var(--blue); }
+  .pull blockquote { margin:0 0 14px; font-family:var(--display); font-weight:600; font-size:clamp(1.2rem,2.2vw,1.42rem); line-height:1.35; letter-spacing:-0.01em; }
+  .pull blockquote::before { content:"\201C"; display:block; font-size:3.4rem; line-height:.55; opacity:.55; margin-bottom:6px; }
+  .pull figcaption { font-size:0.98rem; opacity:.92; }
+  .pull cite { font-style:italic; }
+  .tiles { display:grid; gap:12px; margin:22px 0 26px; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); }
+  .tile { border-radius:18px; padding:20px; background:var(--surface); border:2px solid var(--line); border-top:8px solid var(--tc,var(--red)); }
+  .tile .t-label { color:var(--ink); font-family:var(--display); font-weight:800; font-size:1.12rem; line-height:1.2; margin:0 0 6px; letter-spacing:-0.01em; }
+  .tile p { margin:0; font-size:1rem; line-height:1.55; color:var(--muted); }
+  .tile p strong { color:var(--ink); }
+  .tiles > :nth-child(5n+1) { --tc:var(--red); } .tiles > :nth-child(5n+2) { --tc:var(--yellow); } .tiles > :nth-child(5n+3) { --tc:var(--green); } .tiles > :nth-child(5n+4) { --tc:var(--blue); } .tiles > :nth-child(5n+5) { --tc:var(--violet); }
+  .takeaway { margin:22px 0 0; padding:20px 22px; border-radius:18px; background:var(--tint-yellow); border-left:6px solid var(--yellow); }
+  .takeaway strong { display:block; font-family:var(--display); font-size:1.05rem; margin-bottom:4px; }
+  .takeaway p { margin:0; font-size:1.05rem; }
+  .together { margin:clamp(56px,8vw,88px) 0 0; padding:clamp(28px,5vw,44px); border-radius:28px; background:var(--tint-blue); }
+  .together h2 { margin-bottom:22px; }
+  .venn { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 26px; }
+    .venn div { border-radius:18px; padding:18px 16px; color:#fff; }
+  .venn div:nth-child(1) { background:var(--red); } .venn div:nth-child(2) { background:var(--yellow); color:var(--dark-text); } .venn div:nth-child(3) { background:var(--green); } .venn div:nth-child(4) { background:var(--violet); }
+  .venn strong { display:block; font-family:var(--display); font-size:1.25rem; margin-bottom:4px; }
+  .venn span { font-size:0.95rem; line-height:1.45; display:block; }
+  .filters { list-style:none; padding:0 !important; counter-reset:f; margin:18px 0 22px !important; }
+  .filters li { counter-increment:f; display:grid; grid-template-columns:40px 1fr; gap:12px; align-items:start; padding:12px 0; border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent); margin:0 !important; }
+  .filters li::before { content:counter(f); width:34px; height:34px; border-radius:50%; background:var(--ink); color:var(--paper); display:grid; place-items:center; font-weight:700; font-size:0.95rem; }
+  .fig { margin:34px 0 36px; }
+  .fig img { display:block; width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:20px; box-shadow:8px 8px 0 var(--fc); background:var(--line); }
+  .fig figcaption { margin-top:16px; font-size:0.95rem; line-height:1.5; color:var(--muted); }
+  .fig figcaption span { display:block; font-size:0.85rem; opacity:.8; }
+  .byline { margin:40px 0 0; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:1rem; font-style:italic; }
+  .more-topics { border-top:1px solid var(--line); padding:clamp(44px,7vw,72px) 0 !important; }
+  .art-end { max-width:720px; margin:0 auto; padding:28px clamp(20px,5vw,48px) clamp(40px,6vw,64px); display:flex; gap:12px; flex-wrap:wrap; }
 </style>
 </head>
-<body>
-
-<header class="site">
-  <div class="nav">
-    <a href="../index.html" class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="20" r="12" fill="#E63946"/>
-        <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
-      </svg>
-      <span class="brand-name">Red &amp; Blue Ink</span>
-    </a>
-    <nav class="links">
-      <a href="../index.html">Home</a>
-      <a href="index.html" class="active">Journal</a>
-      <a href="../about.html">About Us</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="../about.html" class="btn btn-outline">About Us</a>
-      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</header>
-
+<body class="c-business">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 64 64">
+  <path d="M21 4h22v12c0 10-5 18-11 28C26 34 21 26 21 16z" fill="currentColor"/>
+  <circle cx="32" cy="21" r="3.2" fill="var(--paper)"/>
+  <path d="M32 24.5V42" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M32 42c-1 4-6 7-6 12a6 6 0 0 0 6 6" fill="var(--red)"/>
+  <path d="M32 42c1 4 6 7 6 12a6 6 0 0 1-6 6" fill="var(--blue)"/>
+</symbol></defs></svg>
+<header class="site-header"><div class="wrap">
+  <a href="/" class="brand" aria-label="Red and Blue Ink, home"><svg aria-hidden="true"><use href="#logo"/></svg>Red &amp; Blue Ink</a>
+  <a href="/about.html" class="nav-link">About</a>
+</div></header>
 <main>
-  <div class="wrap-narrow">
-    <a href="index.html" class="back-link">← Back to the Journal</a>
-
-    <div class="article-head">
-      <span class="eyebrow">The Journal</span>
-      <h1>How to Find a Business Idea That Actually Works</h1>
-      <div class="article-meta">Journal · 8 min read</div>
-    </div>
-  </div>
-
-  <div class="wrap-narrow">
-    <div class="photo-frame article-hero">
-      <img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=75&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Person writing ideas by hand in a notebook" loading="lazy">
-    </div>
-  </div>
-
-  <section class="wrap-narrow">
-    <p class="article-intro reveal">Most people hesitate to start a business for one of two reasons: they don't know where to begin, or they have so many ideas that they can't decide which one to pick. In this current era of technology, we're overwhelmed with business ideas, and AI has accelerated that overwhelm. Still, we lack the confidence to start, and the reason is simple: we need some certainty to succeed. This is a straight look at how to find the idea worth betting on.</p>
-
-    <div class="reveal">
-      <div class="step">
-        <div class="step-num">01 · Where ideas come from</div>
-        <h2>Know where ideas come from</h2>
-        <p>Before going any further, understand one thing: your idea can become a real business. In 1962, the running shoe market in North America was dominated by Adidas and Puma, both from Germany. Phil Knight, a runner, started writing a research paper about shoes. He became obsessed with them and noticed that just as Japanese cameras had come to dominate a market once ruled by German cameras, Japanese shoes could dominate German shoemakers in the running shoe market.</p>
-        <p>He prepared a final presentation, including details about importing, exporting, and how to start the company. It didn't attract much interest from his classmates, but he still scored an A. That same research paper became Nike, a brand that dominated the running shoe market for decades.</p>
-        <div class="pull-quote">
-          "Let everyone else call your idea crazy. Just keep going. Don't stop. Don't even think about stopping until you get there, and don't give much thought to where 'there' is. Whatever comes, just don't stop."
-          <cite>Phil Knight, Shoe Dog</cite>
-        </div>
-        <p>Sam Walton, founder of Walmart, got his start a different way. His family moved next door to a man named Hugh Mattingly, who owned about sixty dime stores, back in 1939. Later, a job offer from JC Penney, then a powerhouse American department store chain, is where his love of retail truly began. Walmart followed decades after.</p>
-        <p>Your idea can come from any of these: your research, your exposure to an industry, your job experience, or a solution to a problem you're facing right now.</p>
-        <div class="pull-quote">
-          "A venture that doesn't create value for others is a hobby. One that doesn't attract attention is a flop. One that doesn't sell the value it creates is a nonprofit. A venture that doesn't deliver what it promises is a scam. And a venture that doesn't bring in enough money to keep operating won't exist very long."
-          <cite>Josh Kaufman, The Personal MBA</cite>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">02 · The cheapest source</div>
-        <h2>Solve a problem you already have</h2>
-        <p>The fastest, cheapest way to find a business idea isn't a research paper or a chance encounter with a retail chain. It's a problem you're already living with. Sara Blakely didn't set out to disrupt hosiery. She cut the feet off her own pantyhose because she wanted a smoother look under white pants and couldn't find anything that did the job. That irritation became Spanx.</p>
-        <p>This is the most underrated idea source because it doesn't require industry access, capital, or a decade of exposure, just attention. The questions worth asking yourself:</p>
-        <ul>
-          <li>What do I complain about at least once a month?</li>
-          <li>What do I currently pay for that does a mediocre job?</li>
-          <li>What do people ask me for help with, unprompted, again and again?</li>
-        </ul>
-        <p>If you're annoyed by something, there's a good chance ten thousand other people are quietly annoyed by the same thing and have never said so out loud. That gap is your opening.</p>
-      </div>
-
-        <div class="step">
-  <div class="step-num">03 · Category</div>
-  <h2>Know the category of your idea</h2>
-  <p>Not all businesses are built to achieve the same objective. Before committing to an idea, you need to align its potential with your personal ambitions and financial goals. Business models generally fall into three distinct categories:</p>
-  
-  <div class="stage-grid" style="margin-bottom:16px;">
-    <div class="stage-card">
-      <div class="sc-label">01 · Income Replacement</div>
-      <p><strong>Freelancing & Direct Services.</strong> Trades time directly for money. Replaces a standard salary quickly, but ceiling growth is capped by personal capacity.</p>
-    </div>
-    <div class="stage-card">
-      <div class="sc-label">02 · Lifestyle & Wealth</div>
-      <p><strong>Productized Services & Niche Agencies.</strong> Leverages systems and small teams to generate high margin and profit, granting financial comfort and personal freedom.</p>
-    </div>
-    <div class="stage-card">
-      <div class="sc-label">03 · Generational Scale</div>
-      <p><strong>Software, Hardware & Mass Media.</strong> High risk and upfront investment, but offers virtually limitless leverage, potential for massive exits, and equity value.</p>
-    </div>
-  </div>
-
-  <p>The Takeaway: Match your business category to your life goals. If you want autonomy and cash flow, lean toward a strong lifestyle business; if you want massive enterprise value, prepare for the capital and risk required for generational scale.</p>
+  <div class="art-hero"><div class="wrap">
+    <p class="crumb"><a href="/">Home</a> / <a href="/business.html">Business</a></p>
+    <div class="art-meta"><span class="tag">Business</span><span>8 minute read</span></div>
+    <h1>How to Find a Business Idea That Actually Works</h1>
+  </div></div>
+  <div class="art-cover"><img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=75&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Person writing ideas by hand in a notebook"></div>
+  <article class="article">
+<p class="lede">Most people hesitate to start a business for one of two reasons: they don't know where to begin, or they have so many ideas that they can't decide which one to pick. In this current era of technology, we're overwhelmed with business ideas, and AI has accelerated that overwhelm. Still, we lack the confidence to start, and the reason is simple: we need some certainty to succeed. This is a straight look at how to find the idea worth betting on.</p>
+<section class="sec"><div class="sec-head"><span class="num">01</span><span class="kicker">Where ideas come from</span></div><h2>Know where ideas come from</h2>
+<p>Before going any further, understand one thing: your idea can become a real business. In 1962, the running shoe market in North America was dominated by Adidas and Puma, both from Germany. Phil Knight, a runner, started writing a research paper about shoes. He became obsessed with them and noticed that just as Japanese cameras had come to dominate a market once ruled by German cameras, Japanese shoes could dominate German shoemakers in the running shoe market.</p>
+<p>He prepared a final presentation, including details about importing, exporting, and how to start the company. It didn't attract much interest from his classmates, but he still scored an A. That same research paper became Nike, a brand that dominated the running shoe market for decades.</p>
+<figure class="fig" style="--fc:var(--blue)"><img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?fm=jpg&amp;q=75&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Runner in white Nike shoes standing on a dark path" loading="lazy"><figcaption>A class research paper about running shoes became one of the biggest brands in the world. <span>Photo: Joseph Barrientos / Unsplash</span></figcaption></figure><figure class="pull "><blockquote>Let everyone else call your idea crazy. Just keep going. Don't stop. Don't even think about stopping until you get there, and don't give much thought to where 'there' is. Whatever comes, just don't stop.</blockquote><figcaption>Phil Knight, <cite>Shoe Dog</cite></figcaption></figure>
+<p>Sam Walton, founder of Walmart, got his start a different way. His family moved next door to a man named Hugh Mattingly, who owned about sixty dime stores, back in 1939. Later, a job offer from JC Penney, then a powerhouse American department store chain, is where his love of retail truly began. Walmart followed decades after.</p>
+<p>Your idea can come from any of these: your research, your exposure to an industry, your job experience, or a solution to a problem you're facing right now.</p>
+<figure class="pull blue"><blockquote>A venture that doesn't create value for others is a hobby. One that doesn't attract attention is a flop. One that doesn't sell the value it creates is a nonprofit. A venture that doesn't deliver what it promises is a scam. And a venture that doesn't bring in enough money to keep operating won't exist very long.</blockquote><figcaption>Josh Kaufman, <cite>The Personal MBA</cite></figcaption></figure></section>
+<section class="sec"><div class="sec-head"><span class="num">02</span><span class="kicker">The cheapest source</span></div><h2>Solve a problem you already have</h2>
+<p>The fastest, cheapest way to find a business idea isn't a research paper or a chance encounter with a retail chain. It's a problem you're already living with. Sara Blakely didn't set out to disrupt hosiery. She cut the feet off her own pantyhose because she wanted a smoother look under white pants and couldn't find anything that did the job. That irritation became Spanx.</p>
+<p>This is the most underrated idea source because it doesn't require industry access, capital, or a decade of exposure, just attention. The questions worth asking yourself:</p>
+<ul><li>What do I complain about at least once a month?</li><li>What do I currently pay for that does a mediocre job?</li><li>What do people ask me for help with, unprompted, again and again?</li></ul>
+<p>If you're annoyed by something, there's a good chance ten thousand other people are quietly annoyed by the same thing and have never said so out loud. That gap is your opening.</p></section>
+<section class="sec"><div class="sec-head"><span class="num">03</span><span class="kicker">Category</span></div><h2>Know the category of your idea</h2>
+<p>Not all businesses are built to achieve the same objective. Before committing to an idea, you need to align its potential with your personal ambitions and financial goals. Business models generally fall into three distinct categories:</p>
+<div class="tiles"><div class="tile"><p class="t-label">Income Replacement</p><p><strong>Freelancing &amp; Direct Services.</strong> Trades time directly for money. Replaces a standard salary quickly, but ceiling growth is capped by personal capacity.</p></div><div class="tile"><p class="t-label">Lifestyle &amp; Wealth</p><p><strong>Productized Services &amp; Niche Agencies.</strong> Leverages systems and small teams to generate high margin and profit, granting financial comfort and personal freedom.</p></div><div class="tile"><p class="t-label">Generational Scale</p><p><strong>Software, Hardware &amp; Mass Media.</strong> High risk and upfront investment, but offers virtually limitless leverage, potential for massive exits, and equity value.</p></div></div><div class="takeaway"><strong>The takeaway</strong><p>Match your business category to your life goals. If you want autonomy and cash flow, lean toward a strong lifestyle business; if you want massive enterprise value, prepare for the capital and risk required for generational scale.</p></div></section>
+<section class="sec"><div class="sec-head"><span class="num">04</span><span class="kicker">Validation</span></div><h2>Test it before you build it</h2>
+<p>Here's where most first-time entrepreneurs lose months, or years. They fall in love with an idea and start building before anyone has told them they'd pay for it. Before Nike existed, Phil Knight was already importing and selling Onitsuka Tiger shoes out of the trunk of his car, testing whether runners would actually buy Japanese shoes long before he built a factory or a brand. The idea was validated with real money changing hands before it became a company.</p>
+<figure class="fig" style="--fc:var(--red)"><img src="https://images.unsplash.com/photo-1516197370049-569c4eaba1d6?fm=jpg&amp;q=75&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Customer talking with a shop owner across a cafe counter" loading="lazy"><figcaption>Real conversations with real customers tell you more than months of planning. <span>Photo: Toa Heftiba / Unsplash</span></figcaption></figure>
+<p>You can do the same on a much smaller scale:</p>
+<ul><li><strong>Talk to 10 people</strong> who have the problem you think you're solving. Not friends who'll be polite, but strangers or acquaintances who actually live the problem.</li>
+<li><strong>Sell it before you build it.</strong> A landing page with a "Notify Me" button, a pre-order, or even a simple "would you pay for this?" DM gets you real signal, not opinions.</li>
+<li><strong>Do it manually first.</strong> If it's a service or app idea, deliver the outcome by hand for a handful of people before writing a line of code. This tells you if the value is real before you sink capital into building it.</li></ul>
+<p>The goal isn't to prove you're right. It's to find out you're wrong as cheaply and quickly as possible, because you will be wrong about something, and it's far cheaper to learn that from 10 conversations than from six months of building in silence.</p></section>
+<section class="sec"><div class="sec-head"><span class="num">05</span><span class="kicker">Fit</span></div><h2>Match your idea to your operating style</h2>
+<p>The fastest way to abandon a viable business is to pick a model that clashes with how you naturally work. Many founders quit not because their idea failed, but because the daily operational routine burned them out.</p>
+<p>A business idea must fit your energy, temperament, and execution style:</p>
+<ul><li><strong>Client Interaction:</strong> Does the model require constant sales calls, networking, and high-touch account management, or asynchronous execution and deep focus?</li>
+<li><strong>Structure vs. Flexibility:</strong> Are you running a systematic operational machine with strict processes, or an open-ended, creative project?</li>
+<li><strong>Risk &amp; Uncertainty Tolerance:</strong> Does the business require making high-stakes decisions under rapid uncertainty, or can you test and scale incrementally?</li></ul>
+<p>Matching your style to the right business model ensures consistency feels natural rather than like an uphill struggle:</p>
+<div class="tiles"><div class="tile"><p class="t-label">Deep Thinkers &amp; Builders</p><p>Thrive in digital products, async consulting, specialized technical services, or automated content platforms.</p></div><div class="tile"><p class="t-label">Communicators &amp; Dealmakers</p><p>Thrive in high-ticket agencies, client management, direct B2B sales, and community building.</p></div><div class="tile"><p class="t-label">Operations Managers</p><p>Thrive in e-commerce, logistics, franchise models, and structured managed service setups.</p></div></div><div class="takeaway"><strong>The takeaway</strong><p>Tools like the <a href="https://www.16personalities.com/free-personality-test" target="_blank" rel="noopener">16 Personalities test</a> offer helpful self-awareness, but real alignment comes down to daily execution. Pick an idea where the core workload matches your natural strengths.</p></div></section>
+<section class="sec"><div class="sec-head"><span class="num">06</span><span class="kicker">Timing</span></div><h2>Know the stage of your idea</h2>
+<p>A great idea at the wrong time usually fails. If you enter a market too early, you spend all your capital educating customers who don't know they have a problem. Enter too late, and you get squeezed out by giant incumbents. Before committing, map your idea against these four market stages:</p>
+<figure class="fig" style="--fc:var(--green)"><img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?fm=jpg&amp;q=75&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Small green plant growing out of a pile of coins" loading="lazy"><figcaption>Every market grows, matures and fades. Where yours sits today decides how hard the climb will be. <span>Photo: micheile henderson / Unsplash</span></figcaption></figure><div class="tiles"><div class="tile"><p class="t-label">Seed (Emerging)</p><p>Most people aren't aware the solution exists. Search volume is low, and educating the market requires significant capital and time.</p></div><div class="tile"><p class="t-label">Growth</p><p>Awareness is surging, demand outstrips supply, and search trends are climbing. This offers the highest probability of fast traction.</p></div><div class="tile"><p class="t-label">Maturity</p><p>High demand, but served by established players. You don't need to educate the market, you just need a sharper angle, better service, or tighter niche focus to win customers.</p></div><div class="tile"><p class="t-label">Decline</p><p>Big legacy players dominate shrinking demand. Profitability requires massive efficiency or an entirely fresh pivot.</p></div></div><div class="takeaway"><strong>The takeaway</strong><p>The sweet spot for most first-time founders is Growth (to ride a rising wave) or Maturity (where market demand is already validated, and you can win by doing things slightly better or differently).</p></div></section>
+<section class="sec"><div class="sec-head"><span class="num">07</span><span class="kicker">Capital</span></div><h2>Weigh the capital your idea needs</h2>
+<p>Capital determines both your time-to-market and your tolerance for failure. How much capital an idea requires dictates the kind of game you are playing:</p>
+<figure class="fig" style="--fc:var(--yellow)"><img src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?fm=jpg&amp;q=75&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Hand stacking coins on a table" loading="lazy"><figcaption>The money you start with shapes the game you can play. <span>Photo: Towfiqu barbhuiya / Unsplash</span></figcaption></figure><div class="tiles"><div class="tile"><p class="t-label">High Capital</p><p><strong>High moat, high cash risk.</strong> Hardware, manufacturing, or complex software require heavy upfront investment before making a dollar. Competition is lower because fewer people can afford to enter, but the financial risk per attempt is high.</p></div><div class="tile"><p class="t-label">Moderate Capital</p><p><strong>Balanced speed and risk.</strong> Productized services, e-commerce, or paid media models require moderate working capital. You can validate quickly with paid traffic or small inventory runs without risking your entire runway.</p></div><div class="tile"><p class="t-label">Low Capital</p><p><strong>High competition, time risk.</strong> Content, digital products, consulting, or light agency models cost almost nothing to launch. Financial risk is near zero, but competition is fierce. Here, your trade-off isn't money. It's time, skills, and execution speed.</p></div></div><div class="takeaway"><strong>The takeaway</strong><p>If you have limited capital, don't try to build a high-capital business on a shoestring budget. Pick a low-capital model where you can substitute money with leverage, such as unique skills, speed, or personal distribution, to stand out in a crowded market.</p></div></section>
+<section class="sec"><div class="sec-head"><span class="num">08</span><span class="kicker">Knowledge</span></div><h2>Use the knowledge you already have</h2>
+<p>If you have specialized knowledge that generates value by solving a specific problem for a group of people, you already hold the most efficient starting line for a business. The fastest way to build authority and trust isn't acquiring a new skill from scratch. It's weaponizing the domain expertise you've already accumulated.</p>
+<p>Audit your personal knowledge base across three primary areas:</p>
+<ul><li><strong>Professional Exposure:</strong> What workflows, tools, or industry problems do you understand better than 95% of outsiders simply from your day job or past clients?</li>
+<li><strong>Cross-Domain Synthesis:</strong> Where can you combine two ordinary skills (e.g., direct response marketing + local service operations) to create an extraordinary edge?</li>
+<li><strong>Unprompted Expertise:</strong> What specific topics or technical problems do friends, colleagues, or clients already ask you to solve for them without you prompting them?</li></ul>
+<div class="takeaway"><strong>The takeaway</strong><p>You don't need to be the world's leading authority; you only need to be two steps ahead of the person whose problem you are solving, as long as that solution commands a market price.</p></div></section>
+<div class="together"><span class="kicker">Bringing it together</span>
+<h2>An idea worth pursuing sits at the intersection of four things.</h2>
+<div class="venn">
+<div><strong>Skill</strong><span>What you're good at: your skill or experience.</span></div>
+<div><strong>Interest</strong><span>What you're drawn to: this is what the personality fit is really pointing at.</span></div>
+<div><strong>Need</strong><span>What people actually need: real, provable demand, not assumed demand.</span></div>
+<div><strong>Payment</strong><span>What people will pay for: the business model that turns demand into revenue.</span></div>
 </div>
-
-      <div class="step">
-        <div class="step-num">04 · Validation</div>
-        <h2>Test it before you build it</h2>
-        <p>Here's where most first-time entrepreneurs lose months, or years. They fall in love with an idea and start building before anyone has told them they'd pay for it. Before Nike existed, Phil Knight was already importing and selling Onitsuka Tiger shoes out of the trunk of his car, testing whether runners would actually buy Japanese shoes long before he built a factory or a brand. The idea was validated with real money changing hands before it became a company.</p>
-        <p>You can do the same on a much smaller scale:</p>
-        <ul>
-          <li><strong>Talk to 10 people</strong> who have the problem you think you're solving. Not friends who'll be polite, but strangers or acquaintances who actually live the problem.</li>
-          <li><strong>Sell it before you build it.</strong> A landing page with a "Notify Me" button, a pre-order, or even a simple "would you pay for this?" DM gets you real signal, not opinions.</li>
-          <li><strong>Do it manually first.</strong> If it's a service or app idea, deliver the outcome by hand for a handful of people before writing a line of code. This tells you if the value is real before you sink capital into building it.</li>
-        </ul>
-        <p>The goal isn't to prove you're right. It's to find out you're wrong as cheaply and quickly as possible, because you will be wrong about something, and it's far cheaper to learn that from 10 conversations than from six months of building in silence.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-num">05 · Fit</div>
-        <h2>Match your idea to your operating style</h2>
-        <p>The fastest way to abandon a viable business is to pick a model that clashes with how you naturally work. Many founders quit not because their idea failed, but because the daily operational routine burned them out.</p>
-        <p>A business idea must fit your energy, temperament, and execution style:</p>
-        <ul>
-          <li><strong>Client Interaction:</strong> Does the model require constant sales calls, networking, and high-touch account management, or asynchronous execution and deep focus?</li>
-          <li><strong>Structure vs. Flexibility:</strong> Are you running a systematic operational machine with strict processes, or an open-ended, creative project?</li>
-          <li><strong>Risk &amp; Uncertainty Tolerance:</strong> Does the business require making high-stakes decisions under rapid uncertainty, or can you test and scale incrementally?</li>
-       </ul>
-       <p>Matching your style to the right business model ensures consistency feels natural rather than like an uphill struggle:</p>
-       <div class="stage-grid" style="margin-bottom:16px;">
-       <div class="stage-card">
-          <div class="sc-label">01 · Deep Thinkers &amp; Builders</div>
-          <p>Thrive in digital products, async consulting, specialized technical services, or automated content platforms.</p>
-       </div>
-       <div class="stage-card">
-          <div class="sc-label">02 · Communicators &amp; Dealmakers</div>
-      <p>Thrive in high-ticket agencies, client management, direct B2B sales, and community building.</p>
-      </div>
-      <div class="stage-card">
-         <div class="sc-label">03 · Operations Managers</div>
-         <p>Thrive in e-commerce, logistics, franchise models, and structured managed service setups.</p>
-       </div>
-      </div>
-     <p>The Takeaway: Tools like the <a href="https://www.16personalities.com/free-personality-test" target="_blank" rel="noopener">16 Personalities test</a> offer helpful self-awareness, but real alignment comes down to daily execution. Pick an idea where the core workload matches your natural strengths.</p>
-     </div>
-
-      <div class="step">
-        <div class="step-num">06 · Timing</div>
-        <h2>Know the stage of your idea</h2>
-        <p>A great idea at the wrong time usually fails. If you enter a market too early, you spend all your capital educating customers who don't know they have a problem. Enter too late, and you get squeezed out by giant incumbents. Before committing, map your idea against these four market stages:</p>
-        <div class="stage-grid">
-          <div class="stage-card"><div class="sc-label">01 · Seed (Emerging)</div><p>Most people aren't aware the solution exists. Search volume is low, and educating the market requires significant capital and time.</p></div>
-          <div class="stage-card"><div class="sc-label">02 · Growth</div><p>Awareness is surging, demand outstrips supply, and search trends are climbing. This offers the highest probability of fast traction.</p></div>
-          <div class="stage-card"><div class="sc-label">03 · Maturity</div><p>High demand, but served by established players. You don't need to educate the market, you just need a sharper angle, better service, or tighter niche focus to win customers.</p></div>
-          <div class="stage-card"><div class="sc-label">04 · Decline</div><p>Big legacy players dominate shrinking demand. Profitability requires massive efficiency or an entirely fresh pivot.</p></div>
-        </div>
-        <p style="margin-top:14px;">The Takeaway: The sweet spot for most first-time founders is Growth (to ride a rising wave) or Maturity (where market demand is already validated, and you can win by doing things slightly better or differently).</p>
-      </div>
-
-      <div class="step">
-        <div class="step-num">07 · Capital</div>
-        <h2>Weigh the capital your idea needs</h2>
-        <p>Capital determines both your time-to-market and your tolerance for failure. How much capital an idea requires dictates the kind of game you are playing:</p>
-        <div class="stage-grid">
-          <div class="stage-card"><div class="sc-label">01 · High Capital (High Moat, High Cash Risk)</div><p>Hardware, manufacturing, or complex software require heavy upfront investment before making a dollar. Competition is lower because fewer people can afford to enter, but the financial risk per attempt is high.</p></div>
-          <div class="stage-card"><div class="sc-label">02 · Moderate Capital (Balanced Speed & Risk)</div><p>Productized services, e-commerce, or paid media models require moderate working capital. You can validate quickly with paid traffic or small inventory runs without risking your entire runway.</p></div>
-          <div class="stage-card"><div class="sc-label">03 · Low Capital (High Competition, Time Risk)</div><p>Content, digital products, consulting, or light agency models cost almost nothing to launch. Financial risk is near zero, but competition is fierce. Here, your trade-off isn't money—it's time, skills, and execution speed.</p></div>
-      </div>
-      <p style="margin-top:14px;">The Takeaway: If you have limited capital, don't try to build a high-capital business on a shoestring budget. Pick a low-capital model where you can substitute money with Leverage—unique skills, speed, or personal distribution—to stand out in a crowded market.</p>
-      </div>
-      
-      <div class="step">
-  <div class="step-num">08 · Knowledge</div>
-  <h2>Use the knowledge you already have</h2>
-  <p>If you have specialized knowledge that generates value by solving a specific problem for a group of people, you already hold the most efficient starting line for a business. The fastest way to build authority and trust isn't acquiring a new skill from scratch—it's weaponizing the domain expertise you've already accumulated.</p>
-  
-  <p>Audit your personal knowledge base across three primary areas:</p>
-  <ul>
-    <li><strong>Professional Exposure:</strong> What workflows, tools, or industry problems do you understand better than 95% of outsiders simply from your day job or past clients?</li>
-    <li><strong>Cross-Domain Synthesis:</strong> Where can you combine two ordinary skills (e.g., direct response marketing + local service operations) to create an extraordinary edge?</li>
-    <li><strong>Unprompted Expertise:</strong> What specific topics or technical problems do friends, colleagues, or clients already ask you to solve for them without you prompting them?</li>
-  </ul>
-
-  <p>The Takeaway: You don't need to be the world's leading authority; you only need to be two steps ahead of the person whose problem you are solving, as long as that solution commands a market price.</p>
+<p>Miss any one of these and the business either burns you out, never finds customers, or never makes money even with customers. Before you commit to an idea, run it through these five filters:</p>
+<ol class="filters">
+<li><span>Where does the idea come from: research, exposure, or a problem you live with?</span></li>
+<li><span>Does it fit who you are, or will it hollow you out in six months?</span></li>
+<li><span>What stage of the market is it in: seed, growth, maturity, or decline?</span></li>
+<li><span>How much capital does it need, and what does that do to your risk and competition?</span></li>
+<li><span>Have you tested it with real people before building it?</span></li>
+</ol>
+<p style="margin:0">An idea that survives all five filters isn't guaranteed to succeed. Nothing is. But it's no longer a guess, and that's the difference between hesitating on ten ideas and moving on one.</p>
 </div>
+<p class="byline">Written for Red &amp; Blue Ink by a business owner and consultant who's tested this path more than once.</p>
 
-    <div class="together reveal">
-      <span class="eyebrow" style="color:var(--wash);">Bringing it together</span>
-      <h2>An idea worth pursuing sits at the intersection of four things.</h2>
-      <div class="intersect">
-        <div class="ix"><div class="ix-label">Skill</div><p>What you're good at: your skill or experience.</p></div>
-        <div class="ix"><div class="ix-label">Interest</div><p>What you're drawn to: this is what the personality fit is really pointing at.</p></div>
-        <div class="ix"><div class="ix-label">Need</div><p>What people actually need: real, provable demand, not assumed demand.</p></div>
-        <div class="ix"><div class="ix-label">Payment</div><p>What people will pay for: the business model that turns demand into revenue.</p></div>
-      </div>
-      <p style="color:#DCE1EC;font-size:14.5px;max-width:60ch;">Miss any one of these and the business either burns you out, never finds customers, or never makes money even with customers. Before you commit to an idea, run it through these five filters:</p>
-      <div class="filters">
-        <div class="f-item"><span class="fx">1</span>Where does the idea come from: research, exposure, or a problem you live with?</div>
-        <div class="f-item"><span class="fx">2</span>Does it fit who you are, or will it hollow you out in six months?</div>
-        <div class="f-item"><span class="fx">3</span>What stage of the market is it in: seed, growth, maturity, or decline?</div>
-        <div class="f-item"><span class="fx">4</span>How much capital does it need, and what does that do to your risk and competition?</div>
-        <div class="f-item"><span class="fx">5</span>Have you tested it with real people before building it?</div>
-      </div>
-      <p style="color:#DCE1EC;font-size:14.5px;max-width:60ch;margin-top:20px;">An idea that survives all five filters isn't guaranteed to succeed. Nothing is. But it's no longer a guess, and that's the difference between hesitating on ten ideas and moving on one.</p>
-    </div>
-      <div class="together reveal" style="background:var(--wash);border:1px solid rgba(20,33,61,.15);color:var(--navy);margin-top:28px;">
-  <span class="eyebrow" style="color:var(--navy-2);">Action Tool</span>
-  <h2 style="color:var(--navy);font-size:22px;">Audit your business idea in 5 minutes</h2>
-  <p style="color:var(--navy-2);font-size:14.5px;max-width:60ch;">Download the interactive <strong>Idea Scorecard PDF</strong> to run your business idea through all 5 filters, evaluate your market timing, and determine if it's worth building before spending a single dollar.</p>
-  
-  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:20px;">
-    <a href="#" class="btn btn-red" onclick="alert('Scorecard download link triggered!'); return false;">Download the Free PDF Scorecard ↓</a>
+  </article>
+  <div class="art-end">
+    <a href="/business.html" class="btn">More business notes</a>
+    <a href="/latest.html" class="btn">See latest articles</a>
   </div>
-</div>
-
-    <div class="ink-divider" aria-hidden="true" style="padding-top:12px;"><span class="line"></span><span class="dot r"></span><span class="dot b"></span><span class="line"></span></div>
-
-    <div class="article-foot reveal">
-      <p>Written for Red &amp; Blue Ink by a business owner and consultant who's tested this path more than once.</p>
-      <a href="index.html" class="btn btn-outline">Back to the Journal →</a>
-    </div>
-  </section>
+  <section class="more-topics"><div class="wrap">
+    <h2 class="section-title">Explore other topics</h2>
+    <ul class="others"><li class="c-marketing"><a href="/marketing.html">Marketing<span>Getting the right people to notice you</span></a></li><li class="c-finance"><a href="/finance.html">Finance<span>Money for people starting out</span></a></li><li class="c-productivity"><a href="/productivity.html">Productivity<span>Doing the work with the hours you have</span></a></li></ul>
+  </div></section>
 </main>
-
-<footer>
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a href="../index.html" class="brand">
-        <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="16" cy="20" r="12" fill="#E63946"/>
-          <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
-        </svg>
-        <span class="brand-name">Red &amp; Blue Ink</span>
-      </a>
-      <p>A tested path from "I have an idea" to "I know if it's worth building."</p>
-    </div>
+<footer class="site-footer"><div class="wrap">
+  <div class="footer-grid">
     <div>
-      <h5>Read</h5>
-      <ul>
-        <li><a href="index.html">The Journal</a></li>
-        <li><a href="../index.html">Home</a></li>
-      </ul>
+      <a href="/" class="brand" aria-label="Red and Blue Ink, home"><svg aria-hidden="true"><use href="#logo"/></svg>Red &amp; Blue Ink</a>
+      <p>Plain-language notes on business, marketing, finance and productivity.</p>
     </div>
-    <div>
-      <h5>Company</h5>
-      <ul>
-        <li><a href="../about.html">About Us</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Follow</h5>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Newsletter</a></li>
-      </ul>
-    </div>
+    <div><h4>Policies</h4><ul>
+      <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="/terms.html">Terms and Conditions</a></li>
+      <li><a href="/disclaimer.html">Disclaimer</a></li>
+      <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact page</a></li>
+    </ul><a href="mailto:hello@redandblueink.com" class="mail">hello@redandblueink.com</a></div>
   </div>
-  <div class="foot-bottom">
-    <span>© 2026 Red &amp; Blue Ink</span>
-    <span>Bold action. Clear thinking.</span>
-  </div>
-</footer>
-
-<script>
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); } });
-  },{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-  const toggle = document.querySelector('.menu-toggle');
-  const links = document.querySelector('nav.links');
-  if(toggle){
-    toggle.addEventListener('click', ()=>{
-      const open = links.style.display === 'flex';
-      links.style.display = open ? 'none' : 'flex';
-      links.style.cssText += open ? '' : 'position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 32px;border-bottom:1px solid rgba(20,33,61,.1);gap:16px;';
-    });
-  }
-</script>
-
+  <div class="copy">&copy; <span id="year">2026</span> Red &amp; Blue Ink. All rights reserved.</div>
+</div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
