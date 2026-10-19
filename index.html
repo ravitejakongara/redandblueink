@@ -2,510 +2,334 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Red &amp; Blue Ink: Business ideas worth building</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Red &amp; Blue Ink | Notes on business, marketing, finance and productivity</title>
+<meta name="description" content="Plain-language notes on business, marketing, finance and productivity for people who want to start something of their own.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#14213D; --navy-2:#1D3557; --red:#E63946; --red-deep:#AD2831;
-    --steel:#457B9D; --wash:#A8DADC; --paper:#EFF2EC; --card:#FFFFFF;
-    --ink-text:#1B1E27; --max:1180px;
+  :root {
+    --paper: #F7F8FC;
+    --surface: #FFFFFF;
+    --ink: #12172E;
+    --muted: #586078;
+    --line: #DCE0EB;
+    --red: #D7261E;
+    --blue: #1F4FE0;
+    --yellow: #FFC23D;
+    --green: #12A579;
+    --violet: #7A4DFF;
+    --pink: #FF6FA8;
+    --tint-blue: #E6ECFF;
+    --tint-yellow: #FFF3CF;
+    --tint-pink: #FFE5EF;
+    --dark-text: #12172E;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+    --wrap: 1120px;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{overflow-x:hidden;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink-text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
-  img,svg{display:block;max-width:100%;}
-  a{color:inherit;}
-  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:600;margin:0 0 .4em;letter-spacing:-0.02em;}
-  p{margin:0 0 1em;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
-  .eyebrow{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;}
-  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--steel));display:inline-block;}
-  a.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-decoration:none;padding:14px 24px;border-radius:3px;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;}
-  a.btn-red{background:var(--red);color:#fff;}
-  a.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);}
-  a.btn-outline{border:1.5px solid var(--navy);color:var(--navy);background:transparent;}
-  a.btn-outline:hover{background:var(--navy);color:var(--paper);transform:translateY(-2px);}
-  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--red); outline-offset:2px;}
-
-  .photo-frame{position:relative;overflow:hidden;border-radius:4px;background:var(--navy);}
-  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
-  .photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--red),var(--steel));opacity:.17;mix-blend-mode:multiply;pointer-events:none;}
-
-  header.site{position:sticky;top:0;z-index:50;background:rgba(239,242,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(20,33,61,.1);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:var(--max);margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);}
-  .brand-mark{width:28px;height:28px;flex:none;}
-  .brand-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;}
-  nav.links{display:flex;gap:28px;align-items:center;}
-  nav.links a{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.02em;text-decoration:none;color:var(--navy-2);position:relative;padding:2px 0;}
-  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;background:var(--red);transition:width .25s ease;}
-  nav.links a:hover::after, nav.links a.active::after{width:100%;}
-  nav.links a.active{color:var(--navy);}
-  .nav-cta{display:flex;align-items:center;gap:20px;}
-  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
-  .menu-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:4px 0;}
-
-  /* ---------- HERO CAROUSEL (full-bleed, text over image) ---------- */
-  .hero{position:relative;padding:32px 0 0;overflow:hidden;}
-  .carousel{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;border-radius:6px;}
-  .carousel::-webkit-scrollbar{display:none;}
-  .carousel-track{display:flex;}
-  .slide{flex:0 0 100%;scroll-snap-align:start;position:relative;min-height:clamp(440px,58vw,620px);display:flex;align-items:flex-end;overflow:hidden;}
-
-  .slide-media{position:absolute;inset:0;z-index:0;}
-  .slide-media img{width:100%;height:100%;object-fit:cover;display:block;}
-  .slide-media.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,33,61,.92) 0%,rgba(20,33,61,.72) 38%,rgba(20,33,61,.28) 68%,rgba(20,33,61,.1) 100%);}
-  .slide-media.ink{background:var(--navy);}
-  .slide-media.ink .ip-blot{position:absolute;border-radius:50%;}
-  .slide-media.ink::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,33,61,.4) 0%,rgba(20,33,61,.15) 45%,transparent 70%);}
-
-  .slide-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 32px;width:100%;}
-  .slide-content-inner{max-width:52ch;padding:56px 0 52px;}
-  .slide .eyebrow{margin-bottom:18px;color:var(--wash);}
-  .slide h1{font-size:clamp(30px,4.2vw,50px);line-height:1.08;color:#fff;max-width:15ch;}
-  .slide h1 em{font-style:normal;font-weight:500;background:linear-gradient(100deg,#ff8a92 45%,var(--wash) 55%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .slide .lede{font-size:16.5px;max-width:44ch;color:#DCE1EC;}
-  .hero-ctas{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap;}
-  .hero-ctas .btn-outline{border-color:rgba(255,255,255,.6);color:#fff;}
-  .hero-ctas .btn-outline:hover{background:#fff;color:var(--navy);}
-  .hero-photo-tag{position:absolute;bottom:22px;right:28px;z-index:2;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.04em;color:#fff;background:rgba(20,33,61,.5);padding:5px 10px;border-radius:2px;}
-
-  .carousel-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin:24px 0 8px;}
-  .carousel-dots{display:flex;gap:9px;}
-  .carousel-dots button{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:rgba(20,33,61,.22);cursor:pointer;transition:background .25s ease,transform .25s ease;}
-  .carousel-dots button.active{background:var(--red);transform:scale(1.2);}
-  .carousel-arrow{width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(20,33,61,.25);background:var(--paper);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:border-color .2s ease,color .2s ease,transform .2s ease;flex:none;}
-  .carousel-arrow:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px);}
-
-  .ink-divider{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 0 8px;}
-  .ink-divider .dot{width:9px;height:9px;border-radius:50%;}
-  .ink-divider .dot.r{background:var(--red);}
-  .ink-divider .dot.b{background:var(--steel);margin-left:-4px;mix-blend-mode:multiply;}
-  .ink-divider .line{width:48px;height:1px;background:rgba(20,33,61,.16);}
-
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-
-  section{padding:88px 0;}
-  section.tight{padding:64px 0;}
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap;}
-  .section-head h2{font-size:clamp(26px,3.2vw,36px);color:var(--navy);max-width:20ch;}
-  .section-head .desc{max-width:40ch;color:var(--navy-2);font-size:15.5px;}
-
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
-
-  /* ---------- ARTICLE CARD GRID ---------- */
-  .article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .article-card{background:var(--card);border:1px solid rgba(20,33,61,.12);border-radius:4px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
-  .article-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(20,33,61,.12);border-color:rgba(20,33,61,.2);}
-  .article-thumb{aspect-ratio:4/3;}
-  .article-thumb img{transition:transform .5s ease;}
-  .article-card:hover .article-thumb img{transform:scale(1.06);}
-  .article-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column;}
-  .article-meta{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--navy-2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
-  .article-title{font-size:17.5px;color:var(--navy);margin-bottom:8px;line-height:1.3;transition:color .2s ease;}
-  .article-card:hover .article-title{color:var(--red);}
-  .article-excerpt{font-size:13.5px;color:var(--navy-2);margin:0;flex:1;}
-
-  .article-card.placeholder{cursor:default;border-style:dashed;border-color:rgba(20,33,61,.22);}
-  .article-card.placeholder:hover{transform:none;box-shadow:none;border-color:rgba(20,33,61,.22);}
-  .article-card.placeholder .article-thumb{aspect-ratio:4/3;background:linear-gradient(135deg,rgba(230,57,70,.08),rgba(69,123,157,.1));display:flex;align-items:center;justify-content:center;}
-  .article-card.placeholder .ph-dots{display:flex;gap:8px;}
-  .article-card.placeholder .ph-dots span{width:8px;height:8px;border-radius:50%;background:rgba(20,33,61,.18);}
-  .article-card.placeholder .article-meta{color:var(--red);}
-  .article-card.placeholder .article-title{color:var(--navy-2);}
-  .article-card.placeholder:hover .article-title{color:var(--navy-2);}
-  .article-card.placeholder .article-excerpt{color:rgba(29,53,87,.6);}
-
-  .view-all{display:inline-block;margin-top:32px;font-family:'Space Mono',monospace;font-size:13px;color:var(--red);text-decoration:none;}
-  .view-all:hover{text-decoration:underline;}
-
-  @media (max-width:900px){.article-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:560px){.article-grid{grid-template-columns:1fr;}}
-
-  .mission{background:var(--navy);color:var(--paper);}
-  .mission .wrap{display:grid;grid-template-columns:.8fr 1fr;gap:56px;align-items:start;}
-  .mission .eyebrow{color:var(--wash);}
-  .mission h2{color:#fff;font-size:clamp(24px,3vw,32px);}
-  .mission p{color:#C7CEDB;font-size:15.5px;max-width:50ch;}
-  .mission blockquote{margin:22px 0 0;padding:18px 20px;border-left:2px solid var(--red);font-family:'Space Grotesk',sans-serif;font-size:16px;color:#fff;font-weight:500;}
-  .mission blockquote cite{display:block;margin-top:10px;font-family:'Space Mono',monospace;font-style:normal;font-size:11px;letter-spacing:.05em;color:var(--wash);text-transform:uppercase;}
-
-  /* ---------- VALUE PROPS ---------- */
-  .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(20,33,61,.12);border:1px solid rgba(20,33,61,.12);border-radius:4px;overflow:hidden;}
-  .value-card{background:var(--card);padding:32px 28px;}
-  .value-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.06em;margin-bottom:14px;}
-  .value-card h3{font-size:17.5px;color:var(--navy);margin-bottom:8px;}
-  .value-card p{font-size:13.5px;color:var(--navy-2);margin:0;}
-  .value-card.soon{background:repeating-linear-gradient(135deg,var(--card),var(--card) 10px,rgba(20,33,61,.03) 10px,rgba(20,33,61,.03) 20px);}
-  .value-card.soon .value-num{color:var(--steel);}
-  @media (max-width:900px){.value-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:520px){.value-grid{grid-template-columns:1fr;}}
-
-  /* ---------- HOW IT WORKS (condensed) ---------- */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid rgba(20,33,61,.14);padding-top:40px;}
-  .step-num{font-family:'Space Mono',monospace;font-size:12px;color:var(--red);letter-spacing:.06em;margin-bottom:10px;}
-  .steps h3{font-size:19px;color:var(--navy);}
-  .steps p{font-size:14.5px;color:var(--navy-2);margin:0;}
-  @media (max-width:760px){.steps{grid-template-columns:1fr;gap:32px;}}
-
-  /* ---------- SIGNUP ---------- */
-  .signup{background:var(--card);border:1px solid rgba(20,33,61,.12);padding:48px 44px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
-  .signup h3{font-size:23px;color:var(--navy);margin-bottom:6px;}
-  .signup p{margin:0;color:var(--navy-2);font-size:14.5px;}
-  form.sform{display:flex;gap:0;flex:none;}
-  form.sform input{font-family:'Space Mono',monospace;font-size:13px;padding:14px 16px;border:1.5px solid var(--navy);border-right:none;background:transparent;width:230px;outline:none;color:var(--navy);}
-  form.sform input::placeholder{color:rgba(20,33,61,.5);}
-  form.sform button{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.03em;background:var(--navy);color:#fff;border:1.5px solid var(--navy);padding:14px 20px;cursor:pointer;transition:background .25s ease;}
-  form.sform button:hover{background:var(--red);border-color:var(--red);}
-  .form-note{font-family:'Space Mono',monospace;font-size:11px;color:var(--navy-2);margin-top:8px;}
-  @media (max-width:760px){
-    .signup{flex-direction:column;align-items:flex-start;padding:36px 28px;}
-    form.sform{width:100%;}
-    form.sform input{width:100%;}
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1122; --surface: #151A31; --ink: #EDEFF7; --muted: #9CA3BE; --line: #262C48;
+      --red: #F0473D; --blue: #5B7CFF; --yellow: #FFCB57; --green: #2CC995; --violet: #9572FF; --pink: #FF85B6;
+      --tint-blue: #16204A; --tint-yellow: #2A2414; --tint-pink: #2E1626;
+      color-scheme: dark;
+    }
   }
-
-  footer{background:var(--navy);color:#C7CEDB;padding:60px 0 28px;}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;}
-  .foot-brand .brand-name{color:#fff;}
-  .foot-brand p{font-size:13.5px;color:#9FA9C0;max-width:32ch;margin-top:12px;}
-  footer h5{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8792AC;margin:0 0 16px;}
-  footer ul{list-style:none;margin:0;padding:0;}
-  footer li{margin-bottom:10px;}
-  footer a{text-decoration:none;font-size:14px;color:#DCE1EC;}
-  footer a:hover{color:var(--wash);}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'Space Mono',monospace;font-size:11px;color:#7A85A0;}
-  @media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:520px){.foot-grid{grid-template-columns:1fr;gap:28px;}}
-
-  @media (max-width:420px){.wrap{padding:0 20px;} .nav{padding:16px 20px;} .slide-content{padding:0 20px;}}
-  @media (max-width:760px){
-    nav.links,.nav-cta .btn-outline{display:none;}
-    .menu-toggle{display:block;}
-    .slide{min-height:clamp(420px,86vw,540px);align-items:flex-end;}
-    .slide-content-inner{padding:36px 0 40px;max-width:none;}
-    .hero-photo-tag{right:16px;bottom:16px;}
-    .mission .wrap{grid-template-columns:1fr;}
+  :root[data-theme="dark"] {
+    --paper: #0D1122; --surface: #151A31; --ink: #EDEFF7; --muted: #9CA3BE; --line: #262C48;
+    --red: #F0473D; --blue: #5B7CFF; --yellow: #FFCB57; --green: #2CC995; --violet: #9572FF; --pink: #FF85B6;
+    --tint-blue: #16204A; --tint-yellow: #2A2414; --tint-pink: #2E1626;
+    color-scheme: dark;
   }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px); }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; z-index: 10; height: env(safe-area-inset-top, 0px); background: var(--paper); }
+  img, svg { max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px); }
+  section { padding: clamp(52px, 8vw, 96px) 0; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px 24px; flex-wrap: wrap; margin-bottom: clamp(24px, 4vw, 40px); }
+  .section-title { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0; max-width: 18em; }
+  .section-sub { color: var(--muted); margin: 10px 0 0; max-width: 36em; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid var(--ink); background: var(--surface); color: var(--ink); white-space: nowrap; }
+  .btn:hover { background: var(--yellow); border-color: var(--yellow); color: var(--dark-text); }
+
+  /* Category colors */
+  .c-business { --c: var(--red); --c-text: #fff; }
+  .c-marketing { --c: var(--yellow); --c-text: var(--dark-text); }
+  .c-finance { --c: var(--green); --c-text: #fff; }
+  .c-productivity { --c: var(--violet); --c-text: #fff; }
+  .tag { display: inline-block; padding: 3px 12px; border-radius: 999px; background: var(--c); color: var(--c-text); font-size: 0.82rem; font-weight: 600; text-decoration: none; }
+
+  /* Header */
+  .site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .site-header::before { content: ""; display: block; height: 5px; background: linear-gradient(90deg, var(--red) 0 25%, var(--yellow) 25% 50%, var(--green) 50% 75%, var(--violet) 75% 100%); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.01em; }
+  .brand svg { width: 36px; height: 36px; flex: none; }
+  .nav-link { text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: 999px; border: 2px solid var(--line); }
+  .nav-link:hover { border-color: var(--ink); }
+
+  /* Intro */
+  .intro { background: var(--tint-blue); position: relative; overflow: hidden; padding: clamp(40px, 7vw, 72px) 0; }
+  .intro::before { content: ""; position: absolute; width: clamp(140px, 22vw, 280px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); right: -5%; top: -40%; }
+  .intro .wrap { position: relative; display: flex; align-items: center; gap: clamp(20px, 4vw, 48px); }
+  .intro-nib { width: clamp(64px, 10vw, 104px); flex: none; }
+  .intro h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.9rem, 4.6vw, 3.2rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 10px; }
+  .intro p { margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: var(--muted); max-width: 40em; }
+
+  /* Categories */
+  .cat-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 860px) { .cat-grid { grid-template-columns: 1fr 1fr; } }
+  .cat-grid a { display: flex; flex-direction: column; height: 100%; min-height: 170px; padding: 24px 22px; border-radius: 20px; text-decoration: none; background: var(--c); color: var(--c-text); transition: transform .2s; }
+  .cat-grid a:hover { transform: translateY(-4px); }
+  .cat-grid strong { font-family: var(--display); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .cat-grid span { font-size: 0.98rem; opacity: .92; margin-top: 6px; }
+  .cat-grid em { font-style: normal; font-weight: 600; margin-top: auto; padding-top: 18px; text-decoration: underline; text-underline-offset: 4px; }
+
+  /* Latest */
+  .latest { background: var(--tint-yellow); }
+  .latest-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; }
+  @media (max-width: 860px) { .latest-grid { grid-template-columns: 1fr; } }
+  .card { display: block; background: var(--surface); border: 2px solid var(--line); border-radius: 20px; text-decoration: none; transition: box-shadow .2s, border-color .2s; }
+  .card:hover { border-color: var(--ink); box-shadow: 6px 6px 0 var(--pink); }
+  .card-feature { overflow: hidden; }
+  .cover { aspect-ratio: 16 / 8; background: conic-gradient(from 45deg, var(--red), var(--yellow), var(--green), var(--blue), var(--violet), var(--red)); display: grid; place-items: center; }
+  .cover svg { width: 22%; color: #fff; }
+  .card-body { padding: clamp(20px, 3vw, 30px); }
+  .meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+  .card h3 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; margin: 0 0 10px; }
+  .card-feature h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+  .card p { color: var(--muted); margin: 0; }
+  .latest-side { display: grid; gap: 18px; }
+  .latest-side .card h3 { font-size: 1.3rem; }
+
+  /* Most read */
+  .rank { list-style: none; margin: 0; padding: 0; counter-reset: rank; border-top: 2px solid var(--ink); }
+  .rank li { counter-increment: rank; border-bottom: 1px solid var(--line); }
+  .rank a { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 16px; padding: 20px 0; text-decoration: none; }
+  .rank a::before { content: counter(rank); font-family: var(--display); font-weight: 800; font-size: 2.4rem; line-height: 1; color: var(--c); }
+  .rank h3 { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.45rem); letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 4px; }
+  .rank small { color: var(--muted); font-size: 0.9rem; }
+  .rank a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+  @media (max-width: 600px) { .rank a { grid-template-columns: 44px 1fr; } .rank a::before { font-size: 1.8rem; } .rank .tag { display: none; } }
+
+  /* Quotes */
+  .quotes { background: var(--tint-pink); }
+  .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
+  .quote { margin: 0; padding: clamp(24px, 3vw, 32px); border-radius: 22px; background: var(--c); color: var(--c-text); display: flex; flex-direction: column; }
+  .quote blockquote { margin: 0 0 22px; font-family: var(--display); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.4rem); line-height: 1.3; letter-spacing: -0.01em; }
+  .quote blockquote::before { content: "\201C"; display: block; font-size: 3.6rem; line-height: .6; margin-bottom: 8px; opacity: .6; }
+  .quote figcaption { margin-top: auto; font-size: 0.95rem; }
+  .quote figcaption strong { display: block; font-size: 1.02rem; }
+  .quote cite { font-style: italic; opacity: .9; }
+  .quote .related { display: inline-block; margin-top: 14px; font-weight: 600; text-underline-offset: 4px; }
+
+  /* Footer */
+  .site-footer { background: var(--ink); color: var(--paper); padding: clamp(44px, 6vw, 64px) 0 28px; }
+  .site-footer .brand svg { color: var(--paper); }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+  @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-grid p { color: color-mix(in srgb, var(--paper) 70%, transparent); margin: 12px 0 0; max-width: 26em; font-size: 0.95rem; }
+  .footer-grid h4 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 12px; }
+  .footer-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .footer-grid ul a { text-decoration: none; color: color-mix(in srgb, var(--paper) 78%, transparent); }
+  .footer-grid ul a:hover { color: var(--yellow); }
+  .mail { display: inline-block; margin-top: 4px; font-weight: 600; color: var(--yellow); text-decoration: none; }
+  .mail:hover { text-decoration: underline; }
+  .copy { border-top: 1px solid color-mix(in srgb, var(--paper) 18%, transparent); margin-top: 40px; padding-top: 20px; font-size: 0.88rem; color: color-mix(in srgb, var(--paper) 60%, transparent); }
 </style>
 </head>
 <body>
 
-<header class="site">
-  <div class="nav">
-    <a href="index.html" class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="20" r="12" fill="#E63946"/>
-        <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
-      </svg>
-      <span class="brand-name">Red &amp; Blue Ink</span>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M21 4h22v12c0 10-5 18-11 28C26 34 21 26 21 16z" fill="currentColor"/>
+      <circle cx="32" cy="21" r="3.2" fill="var(--paper)"/>
+      <path d="M32 24.5V42" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M32 42c-1 4-6 7-6 12a6 6 0 0 0 6 6" fill="var(--red)"/>
+      <path d="M32 42c1 4 6 7 6 12a6 6 0 0 1-6 6" fill="var(--blue)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="Red and Blue Ink, home">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      Red &amp; Blue Ink
     </a>
-    <nav class="links">
-      <a href="index.html" class="active">Home</a>
-      <a href="business-notes.html">Business Notes</a>
-      <a href="about.html">About Us</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="business-notes.html" class="btn btn-outline">Read Business Notes</a>
-      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
+    <a href="/about.html" class="nav-link">About</a>
   </div>
 </header>
 
 <main>
-
-  <section class="hero">
-    <div class="carousel" id="heroCarousel">
-      <div class="carousel-track">
-
-        <div class="slide">
-          <div class="slide-media photo">
-            <img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=70&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Person writing ideas by hand in a notebook" loading="lazy">
-          </div>
-          <span class="hero-photo-tag">Every business starts on paper</span>
-          <div class="slide-content">
-            <div class="slide-content-inner">
-              <span class="eyebrow">Business ideas worth building</span>
-              <h1>Bold ideas need a <em>clear path</em> to build on.</h1>
-              <p class="lede">Most people never start, for one of two reasons: they don't know where to begin, or they have so many ideas they can't pick one. Red &amp; Blue Ink exists to give you that path.</p>
-              <div class="hero-ctas">
-                <a href="business-notes.html" class="btn btn-red">Explore Business Notes →</a>
-                <a href="about.html" class="btn btn-outline">About Us →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="slide-media ink">
-            <div class="ip-blot" style="width:280px;height:280px;right:-60px;top:-60px;background:radial-gradient(circle at 35% 30%,#ff5c68,var(--red) 60%,var(--red-deep) 100%);opacity:.85;"></div>
-            <div class="ip-blot" style="width:340px;height:340px;right:120px;bottom:-140px;background:radial-gradient(circle at 65% 35%,#6fb3cf,var(--steel) 55%,#2d5b76 100%);mix-blend-mode:screen;opacity:.8;"></div>
-          </div>
-          <div class="slide-content">
-            <div class="slide-content-inner">
-              <span class="eyebrow">Test before you build</span>
-              <h1>Don't spend a year <em>guessing.</em></h1>
-              <p class="lede">You don't need capital or a co-founder to find out if an idea holds up. You need a handful of cheap, fast tests, done in the right order.</p>
-              <div class="hero-ctas">
-                <a href="business-notes.html" class="btn btn-red">See how it works →</a>
-                <a href="about.html" class="btn btn-outline">About Us →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="slide-media ink">
-            <div class="ip-blot" style="width:260px;height:260px;right:80px;top:-70px;background:radial-gradient(circle at 35% 30%,#6fb3cf,var(--steel) 60%,#2d5b76 100%);opacity:.8;"></div>
-            <div class="ip-blot" style="width:320px;height:320px;right:-80px;bottom:-100px;background:radial-gradient(circle at 65% 35%,#ff5c68,var(--red) 55%,var(--red-deep) 100%);mix-blend-mode:screen;opacity:.85;"></div>
-          </div>
-          <div class="slide-content">
-            <div class="slide-content-inner">
-              <span class="eyebrow">Built by a working consultant</span>
-              <h1>Not a course. A <em>working method.</em></h1>
-              <p class="lede">Red &amp; Blue Ink comes from real client work, not a template. It's the same path used to help other founders decide what's worth building.</p>
-              <div class="hero-ctas">
-                <a href="business-notes.html" class="btn btn-red">Read Business Notes →</a>
-                <a href="about.html" class="btn btn-outline">About Us →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+  <!-- Intro -->
+  <section class="intro">
+    <div class="wrap">
+      <svg class="intro-nib" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo"/></svg>
+      <div>
+        <h1>Hello Visitor, welcome to Red &amp; Blue Ink.</h1>
+        <p>Plain-language notes on business, marketing, finance and productivity, for people who want to start something of their own.</p>
       </div>
-    </div>
-
-    <div class="carousel-controls">
-      <button class="carousel-arrow" id="prevSlide" aria-label="Previous slide">‹</button>
-      <div class="carousel-dots" id="carouselDots">
-        <button class="dot active" data-index="0" aria-label="Slide 1"></button>
-        <button class="dot" data-index="1" aria-label="Slide 2"></button>
-        <button class="dot" data-index="2" aria-label="Slide 3"></button>
-      </div>
-      <button class="carousel-arrow" id="nextSlide" aria-label="Next slide">›</button>
     </div>
   </section>
 
-  <div class="ink-divider" aria-hidden="true"><span class="line"></span><span class="dot r"></span><span class="dot b"></span><span class="line"></span></div>
-
-  <section class="tight">
+  <!-- Categories -->
+  <section id="topics" aria-labelledby="topics-title">
     <div class="wrap">
-      <div class="section-head reveal">
-        <h2>From Business Notes</h2>
-        <p class="desc">Field notes on finding, testing, and choosing a business idea worth your time.</p>
+      <div class="section-head">
+        <h2 class="section-title" id="topics-title">What we write about</h2>
       </div>
-      <div class="article-grid reveal">
+      <ul class="cat-grid">
+        <li class="c-business"><a href="/business.html"><strong>Business</strong><span>Ideas, validation and first customers</span><em>Read business notes</em></a></li>
+        <li class="c-marketing"><a href="/marketing.html"><strong>Marketing</strong><span>Getting the right people to notice you</span><em>Read marketing notes</em></a></li>
+        <li class="c-finance"><a href="/finance.html"><strong>Finance</strong><span>Money for people starting out</span><em>Read finance notes</em></a></li>
+        <li class="c-productivity"><a href="/productivity.html"><strong>Productivity</strong><span>Doing the work with the hours you have</span><em>Read productivity notes</em></a></li>
+      </ul>
+    </div>
+  </section>
 
-        <a href="journal/how-to-find-a-business-idea-that-actually-works.html" class="article-card">
-          <div class="photo-frame article-thumb">
-            <img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=70&amp;w=700&amp;auto=format&amp;fit=crop" alt="Person writing in a notebook" loading="lazy">
-          </div>
-          <div class="article-body">
-            <div class="article-meta">Business Notes · 8 min read</div>
-            <h3 class="article-title">How to Find a Business Idea That Actually Works</h3>
-            <p class="article-excerpt">A field guide to where ideas actually come from, and how to test one before you build it.</p>
+  <!-- Latest -->
+  <section class="latest" aria-labelledby="latest-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="latest-title">Fresh off the nib</h2>
+          <p class="section-sub">The newest notes, still drying on the page.</p>
+        </div>
+        <a href="/latest.html" class="btn">See all latest articles</a>
+      </div>
+      <div class="latest-grid">
+        <a href="/articles/latest-article.html" class="card card-feature c-business">
+          <div class="cover" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#logo"/></svg></div>
+          <div class="card-body">
+            <div class="meta"><span class="tag">Business</span><span>6 minute read</span></div>
+            <h3>Your newest article title goes here</h3>
+            <p>Two lines from the opening. Pick the sentence that makes a reader think "that's me".</p>
           </div>
         </a>
-
-        <div class="article-card placeholder">
-          <div class="article-thumb"><div class="ph-dots"><span></span><span></span><span></span></div></div>
-          <div class="article-body">
-            <div class="article-meta">Coming soon</div>
-            <h3 class="article-title">Testing Demand Before You Build Anything</h3>
-            <p class="article-excerpt">Cheap, fast ways to check if anyone actually wants what you're planning.</p>
-          </div>
-        </div>
-
-        <div class="article-card placeholder">
-          <div class="article-thumb"><div class="ph-dots"><span></span><span></span><span></span></div></div>
-          <div class="article-body">
-            <div class="article-meta">Coming soon</div>
-            <h3 class="article-title">Finding Your First 10 Customers</h3>
-            <p class="article-excerpt">Where early customers actually come from, before you have a brand or an audience.</p>
-          </div>
-        </div>
-
-        <div class="article-card placeholder">
-          <div class="article-thumb"><div class="ph-dots"><span></span><span></span><span></span></div></div>
-          <div class="article-body">
-            <div class="article-meta">Coming soon</div>
-            <h3 class="article-title">Pricing Your First Product or Service</h3>
-            <p class="article-excerpt">A simple way to land on a price you're not embarrassed to say out loud.</p>
-          </div>
-        </div>
-
-        <div class="article-card placeholder">
-          <div class="article-thumb"><div class="ph-dots"><span></span><span></span><span></span></div></div>
-          <div class="article-body">
-            <div class="article-meta">Coming soon</div>
-            <h3 class="article-title">Knowing When to Walk Away From an Idea</h3>
-            <p class="article-excerpt">The signs that an idea isn't worth more of your time, and how to tell early.</p>
-          </div>
-        </div>
-
-      </div>
-      <a href="business-notes.html" class="view-all">View all in Business Notes →</a>
-    </div>
-  </section>
-
-  <section class="mission tight">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Our mission</span>
-        <h2>Bold ideas need clear thinking.</h2>
-        <p>As a business owner and consultant, I built this to be the tool I wished I'd had. Not more ideas, and not more noise. What you actually need is a way to test the ideas you already have, without needing capital, a co-founder, or a decade of industry exposure first.</p>
-      </div>
-      <div class="reveal">
-        <blockquote>
-          "Let everyone else call your idea crazy. Just keep going. Don't stop. Don't even think about stopping until you get there, and don't give much thought to where 'there' is. Whatever comes, just don't stop."
-          <cite>Phil Knight, Shoe Dog</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="tight">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>What you get.</h2>
-        <p class="desc">Everything here is built to move you from an idea to a decision.</p>
-      </div>
-      <div class="value-grid reveal">
-        <div class="value-card">
-          <div class="value-num">01</div>
-          <h3>A clear path</h3>
-          <p>Step-by-step, not a pile of frameworks. Business Notes walks you through it in order.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-num">02</div>
-          <h3>Field notes</h3>
-          <p>Written from real consulting work, not recycled from other blogs.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-num">03</div>
-          <h3>A real person</h3>
-          <p>Not a faceless brand. Reach out and you'll hear back from someone who's actually done this.</p>
-        </div>
-        <div class="value-card soon">
-          <div class="value-num">Coming soon</div>
-          <h3>Business Tools</h3>
-          <p>Idea scoring, task tracking, and more, built to work alongside the Notes.</p>
+        <div class="latest-side">
+          <a href="/articles/article-2.html" class="card c-marketing">
+            <div class="card-body">
+              <div class="meta"><span class="tag">Marketing</span><span>4 minute read</span></div>
+              <h3>Second newest article title</h3>
+              <p>One line summary of the article.</p>
+            </div>
+          </a>
+          <a href="/articles/article-3.html" class="card c-finance">
+            <div class="card-body">
+              <div class="meta"><span class="tag">Finance</span><span>5 minute read</span></div>
+              <h3>Third newest article title</h3>
+              <p>One line summary of the article.</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="tight">
+  <!-- Most read -->
+  <section aria-labelledby="popular-title">
     <div class="wrap">
-      <div class="signup reveal">
+      <div class="section-head">
         <div>
-          <h3>Get the next post first</h3>
-          <p>One email when a new post lands in Business Notes. Nothing else.</p>
-        </div>
-        <div>
-          <form class="sform" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Signed up';">
-            <input type="email" placeholder="you@work.com" required>
-            <button type="submit">Notify me</button>
-          </form>
-          <div class="form-note">A few emails a year. Unsubscribe anytime.</div>
+          <h2 class="section-title" id="popular-title">The notes readers keep coming back to</h2>
+          <p class="section-sub">Our most read articles, ranked.</p>
         </div>
       </div>
+      <ol class="rank">
+        <li class="c-business"><a href="/articles/popular-1.html"><div><h3>How to tell if your business idea is worth testing</h3><small>7 minute read</small></div><span class="tag">Business</span></a></li>
+        <li class="c-marketing"><a href="/articles/popular-2.html"><div><h3>Finding your first 10 customers without an ad budget</h3><small>6 minute read</small></div><span class="tag">Marketing</span></a></li>
+        <li class="c-finance"><a href="/articles/popular-3.html"><div><h3>What to spend on and what to skip in your first year</h3><small>5 minute read</small></div><span class="tag">Finance</span></a></li>
+        <li class="c-productivity"><a href="/articles/popular-4.html"><div><h3>Building a business on two hours a day</h3><small>5 minute read</small></div><span class="tag">Productivity</span></a></li>
+        <li class="c-business"><a href="/articles/popular-5.html"><div><h3>Too many ideas? How to pick the one to start with</h3><small>6 minute read</small></div><span class="tag">Business</span></a></li>
+      </ol>
     </div>
   </section>
 
+  <!-- Quotations -->
+  <section class="quotes" aria-labelledby="quotes-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="quotes-title">Lines worth underlining</h2>
+          <p class="section-sub">Quotes from the books and people behind our notes.</p>
+        </div>
+      </div>
+      <div class="quote-grid">
+        <figure class="quote c-business">
+          <blockquote>Your quotation goes here. Keep it short enough to read in one breath.</blockquote>
+          <figcaption>
+            <strong>Author name</strong>
+            <cite>Source, such as a book title</cite><br>
+            <a href="/articles/related-1.html" class="related">Related: article title</a>
+          </figcaption>
+        </figure>
+        <figure class="quote c-marketing">
+          <blockquote>A second quotation that connects to one of your notes.</blockquote>
+          <figcaption>
+            <strong>Author name</strong>
+            <cite>Source, such as a podcast or interview</cite><br>
+            <a href="/articles/related-2.html" class="related">Related: article title</a>
+          </figcaption>
+        </figure>
+        <figure class="quote c-productivity">
+          <blockquote>A third quotation, from a book, talk or article you have read.</blockquote>
+          <figcaption>
+            <strong>Author name</strong>
+            <cite>Source, such as an article</cite><br>
+            <a href="/articles/related-3.html" class="related">Related: article title</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="index.html" class="brand">
-          <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="20" r="12" fill="#E63946"/>
-            <circle cx="26" cy="20" r="12" fill="#457B9D" style="mix-blend-mode:multiply"/>
-          </svg>
-          <span class="brand-name">Red &amp; Blue Ink</span>
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" aria-label="Red and Blue Ink, home">
+          <svg aria-hidden="true"><use href="#logo"/></svg>
+          Red &amp; Blue Ink
         </a>
-        <p>A tested path from "I have an idea" to "I know if it's worth building."</p>
+        <p>Plain-language notes on business, marketing, finance and productivity.</p>
       </div>
       <div>
-        <h5>Explore</h5>
+        <h4>Policies</h4>
         <ul>
-          <li><a href="business-notes.html">Business Notes</a></li>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms and Conditions</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html">Cookie Policy</a></li>
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h4>Contact</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact page</a></li>
         </ul>
-      </div>
-      <div>
-        <h5>Follow</h5>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
+        <a href="mailto:hello@redandblueink.com" class="mail">hello@redandblueink.com</a>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Red &amp; Blue Ink</span>
-      <span>Bold action. Clear thinking.</span>
-    </div>
+    <div class="copy">&copy; <span id="year">2026</span> Red &amp; Blue Ink. All rights reserved.</div>
   </div>
 </footer>
 
-<script>
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); } });
-  },{threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-  const toggle = document.querySelector('.menu-toggle');
-  const links = document.querySelector('nav.links');
-  if(toggle){
-    toggle.addEventListener('click', ()=>{
-      const open = links.style.display === 'flex';
-      links.style.display = open ? 'none' : 'flex';
-      links.style.cssText += open ? '' : 'position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 32px;border-bottom:1px solid rgba(20,33,61,.1);gap:16px;';
-    });
-  }
-
-  /* ---------- hero carousel ---------- */
-  const carousel = document.getElementById('heroCarousel');
-  const dots = Array.from(document.querySelectorAll('#carouselDots .dot'));
-  const prevBtn = document.getElementById('prevSlide');
-  const nextBtn = document.getElementById('nextSlide');
-  const slideCount = dots.length;
-  let current = 0;
-  let scrollTimeout;
-
-  function goTo(index){
-    current = Math.max(0, Math.min(slideCount - 1, index));
-    carousel.scrollTo({ left: current * carousel.clientWidth, behavior: 'smooth' });
-    updateDots();
-  }
-  function updateDots(){
-    dots.forEach((d,i)=> d.classList.toggle('active', i === current));
-  }
-  dots.forEach(d=> d.addEventListener('click', ()=> goTo(parseInt(d.dataset.index,10))));
-  prevBtn.addEventListener('click', ()=> goTo(current - 1));
-  nextBtn.addEventListener('click', ()=> goTo(current + 1));
-  carousel.addEventListener('scroll', ()=>{
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(()=>{
-      current = Math.round(carousel.scrollLeft / carousel.clientWidth);
-      updateDots();
-    }, 80);
-  });
-  window.addEventListener('resize', ()=> goTo(current));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Business notes | Red &amp; Blue Ink</title>
+<meta name="description" content="How to find a business idea, check it before you spend money on it, and land your first paying customers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:#F7F8FC; --surface:#FFFFFF; --ink:#12172E; --muted:#586078; --line:#DCE0EB;
+    --red:#D7261E; --blue:#1F4FE0; --yellow:#FFC23D; --green:#12A579; --violet:#7A4DFF; --pink:#FF6FA8;
+    --tint-blue:#E6ECFF; --tint-yellow:#FFF3CF; --tint-pink:#FFE5EF; --dark-text:#12172E;
+    --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+    --wrap:1120px; color-scheme:light; box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0D1122; --surface:#151A31; --ink:#EDEFF7; --muted:#9CA3BE; --line:#262C48;
+      --red:#F0473D; --blue:#5B7CFF; --yellow:#FFCB57; --green:#2CC995; --violet:#9572FF; --pink:#FF85B6;
+      --tint-blue:#16204A; --tint-yellow:#2A2414; --tint-pink:#2E1626; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0D1122; --surface:#151A31; --ink:#EDEFF7; --muted:#9CA3BE; --line:#262C48;
+    --red:#F0473D; --blue:#5B7CFF; --yellow:#FFCB57; --green:#2CC995; --violet:#9572FF; --pink:#FF85B6;
+    --tint-blue:#16204A; --tint-yellow:#2A2414; --tint-pink:#2E1626; color-scheme:dark;
+  }
+  html { scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+  *,*::before,*::after { box-sizing:inherit; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body::before { content:""; position:fixed; inset:0 0 auto; z-index:10; height:env(safe-area-inset-top,0px); background:var(--paper); }
+  a { color:inherit; }
+  :focus-visible { outline:3px solid var(--blue); outline-offset:3px; border-radius:4px; }
+  .wrap { max-width:var(--wrap); margin:0 auto; padding:0 clamp(20px,5vw,48px); }
+  .narrow { max-width:760px; }
+  .c-business { --c:var(--red); --c-text:#fff; --c-tint:var(--tint-pink); }
+  .c-marketing { --c:var(--yellow); --c-text:var(--dark-text); --c-tint:var(--tint-yellow); }
+  .c-finance { --c:var(--green); --c-text:#fff; --c-tint:color-mix(in srgb, var(--green) 14%, var(--paper)); }
+  .c-productivity { --c:var(--violet); --c-text:#fff; --c-tint:color-mix(in srgb, var(--violet) 14%, var(--paper)); }
+  .c-plain { --c:var(--blue); --c-text:#fff; --c-tint:var(--tint-blue); }
+  .site-header { position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--paper); border-bottom:1px solid var(--line); }
+  .site-header::before { content:""; display:block; height:5px; background:linear-gradient(90deg,var(--red) 0 25%,var(--yellow) 25% 50%,var(--green) 50% 75%,var(--violet) 75% 100%); }
+  .site-header .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-family:var(--display); font-weight:800; font-size:1.2rem; letter-spacing:-0.01em; }
+  .brand svg { width:36px; height:36px; flex:none; }
+  .nav-link { text-decoration:none; font-weight:600; padding:8px 16px; border-radius:999px; border:2px solid var(--line); }
+  .nav-link:hover { border-color:var(--ink); }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; border-radius:999px; font-weight:600; text-decoration:none; border:2px solid var(--ink); background:var(--surface); color:var(--ink); }
+  .btn:hover { background:var(--yellow); border-color:var(--yellow); color:var(--dark-text); }
+  .page-hero { background:var(--c-tint); padding:clamp(44px,7vw,80px) 0; position:relative; overflow:hidden; }
+  .page-hero::after { content:""; position:absolute; width:clamp(140px,22vw,280px); aspect-ratio:1; border-radius:50%; background:var(--c); right:-5%; top:-35%; }
+  .page-hero .wrap { position:relative; z-index:1; }
+  .crumb { font-size:0.92rem; color:var(--muted); margin:0 0 14px; }
+  .crumb a { text-decoration:none; } .crumb a:hover { text-decoration:underline; }
+  .page-hero h1 { font-family:var(--display); font-weight:800; font-size:clamp(2.4rem,6vw,4.2rem); line-height:1; letter-spacing:-0.035em; margin:0 0 14px; }
+  .page-hero p.lead { font-size:clamp(1.05rem,1.8vw,1.22rem); color:var(--muted); margin:0; max-width:38em; }
+  main section { padding:clamp(44px,7vw,80px) 0; }
+  .section-title { font-family:var(--display); font-weight:800; font-size:clamp(1.5rem,3vw,2rem); letter-spacing:-0.025em; line-height:1.1; margin:0 0 20px; }
+  .empty { border:2px dashed var(--line); border-radius:20px; padding:clamp(28px,4vw,44px); }
+  .empty h3 { font-family:var(--display); font-size:1.4rem; margin:0 0 8px; letter-spacing:-0.015em; }
+  .empty p { color:var(--muted); margin:0 0 20px; max-width:34em; }
+  .post-list { list-style:none; margin:0; padding:0; border-top:2px solid var(--ink); }
+  .post-list li { border-bottom:1px solid var(--line); }
+  .post-list a { display:block; padding:20px 0; text-decoration:none; }
+  .post-list h3 { font-family:var(--display); font-weight:600; font-size:1.35rem; margin:0 0 4px; letter-spacing:-0.015em; }
+  .post-list small { color:var(--muted); }
+  .post-list a:hover h3 { text-decoration:underline; text-underline-offset:4px; }
+  .tag { display:inline-block; padding:3px 12px; border-radius:999px; background:var(--c); color:var(--c-text); font-size:0.82rem; font-weight:600; margin-right:8px; }
+  .others { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:760px) { .others { grid-template-columns:1fr; } }
+  .others a { display:block; padding:20px; border-radius:18px; background:var(--c); color:var(--c-text); text-decoration:none; font-family:var(--display); font-weight:800; font-size:1.3rem; transition:transform .2s; }
+  .others a span { display:block; font-family:var(--body); font-weight:400; font-size:0.95rem; opacity:.9; margin-top:4px; }
+  .others a:hover { transform:translateY(-3px); }
+  .prose { max-width:42em; }
+  .prose h2 { font-family:var(--display); font-weight:800; font-size:1.45rem; letter-spacing:-0.02em; line-height:1.2; margin:2.2em 0 0.5em; }
+  .prose h2:first-child { margin-top:0; }
+  .prose p, .prose li { color:var(--ink); }
+  .prose ul { padding-left:1.2em; }
+  .prose li { margin-bottom:0.4em; }
+  .prose a { color:var(--blue); }
+  .updated { color:var(--muted); font-size:0.95rem; margin:14px 0 0; }
+  .contact-card { background:var(--surface); border:2px solid var(--line); border-radius:22px; padding:clamp(24px,4vw,40px); }
+  .contact-card .email { font-family:var(--display); font-weight:800; font-size:clamp(1.4rem,3.4vw,2.2rem); letter-spacing:-0.02em; color:var(--blue); text-decoration:none; word-break:break-word; }
+  .contact-card .email:hover { text-decoration:underline; }
+  .site-footer { background:var(--ink); color:var(--paper); padding:clamp(44px,6vw,64px) 0 28px; }
+  .footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px; }
+  @media (max-width:760px) { .footer-grid { grid-template-columns:1fr; } }
+  .footer-grid p { color:color-mix(in srgb,var(--paper) 70%,transparent); margin:12px 0 0; max-width:26em; font-size:0.95rem; }
+  .footer-grid h4 { font-family:var(--display); font-size:1.05rem; margin:0 0 12px; }
+  .footer-grid ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-grid ul a { text-decoration:none; color:color-mix(in srgb,var(--paper) 78%,transparent); }
+  .footer-grid ul a:hover { color:var(--yellow); }
+  .mail { display:inline-block; margin-top:4px; font-weight:600; color:var(--yellow); text-decoration:none; }
+  .mail:hover { text-decoration:underline; }
+  .copy { border-top:1px solid color-mix(in srgb,var(--paper) 18%,transparent); margin-top:40px; padding-top:20px; font-size:0.88rem; color:color-mix(in srgb,var(--paper) 60%,transparent); }
+</style>
+</head>
+<body class="c-business">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 64 64">
+  <path d="M21 4h22v12c0 10-5 18-11 28C26 34 21 26 21 16z" fill="currentColor"/>
+  <circle cx="32" cy="21" r="3.2" fill="var(--paper)"/>
+  <path d="M32 24.5V42" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M32 42c-1 4-6 7-6 12a6 6 0 0 0 6 6" fill="var(--red)"/>
+  <path d="M32 42c1 4 6 7 6 12a6 6 0 0 1-6 6" fill="var(--blue)"/>
+</symbol></defs></svg>
+<header class="site-header"><div class="wrap">
+  <a href="/" class="brand" aria-label="Red and Blue Ink, home"><svg aria-hidden="true"><use href="#logo"/></svg>Red &amp; Blue Ink</a>
+  <a href="/about.html" class="nav-link">About</a>
+</div></header>
+<main>
+  <div class="page-hero"><div class="wrap">
+    <p class="crumb"><a href="/">Home</a> / Business</p>
+    <h1>Business</h1>
+    <p class="lead">How to find a business idea, check it before you spend money on it, and land your first paying customers.</p>
+  </div></div>
+  <section><div class="wrap">
+    <h2 class="section-title">Business notes</h2>
+    <!-- When you publish an article, replace the "empty" block below with:
+    <ul class="post-list">
+      <li><a href="/articles/your-article.html"><span class="tag">Business</span><small>5 minute read</small><h3>Article title</h3><small>One line summary of the article.</small></a></li>
+    </ul>
+    -->
+    <div class="empty">
+      <h3>The first business note is on its way.</h3>
+      <p>New notes are published every week. In the meantime, the latest articles across every topic are one click away.</p>
+      <a href="/latest.html" class="btn">See latest articles</a>
+    </div>
+  </div></section>
+  <section style="padding-top:0"><div class="wrap">
+    <h2 class="section-title">Explore other topics</h2>
+    <ul class="others"><li class="c-marketing"><a href="/marketing.html">Marketing<span>Getting the right people to notice you</span></a></li><li class="c-finance"><a href="/finance.html">Finance<span>Money for people starting out</span></a></li><li class="c-productivity"><a href="/productivity.html">Productivity<span>Doing the work with the hours you have</span></a></li></ul>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="footer-grid">
+    <div>
+      <a href="/" class="brand" aria-label="Red and Blue Ink, home"><svg aria-hidden="true"><use href="#logo"/></svg>Red &amp; Blue Ink</a>
+      <p>Plain-language notes on business, marketing, finance and productivity.</p>
+    </div>
+    <div><h4>Policies</h4><ul>
+      <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="/terms.html">Terms and Conditions</a></li>
+      <li><a href="/disclaimer.html">Disclaimer</a></li>
+      <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact page</a></li>
+    </ul><a href="mailto:hello@redandblueink.com" class="mail">hello@redandblueink.com</a></div>
+  </div>
+  <div class="copy">&copy; <span id="year">2026</span> Red &amp; Blue Ink. All rights reserved.</div>
+</div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
