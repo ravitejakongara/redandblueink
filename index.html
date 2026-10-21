@@ -105,6 +105,8 @@
   .card-feature { overflow: hidden; }
   .cover { aspect-ratio: 16 / 8; background: conic-gradient(from 45deg, var(--red), var(--yellow), var(--green), var(--blue), var(--violet), var(--red)); display: grid; place-items: center; }
   .cover svg { width: 22%; color: #fff; }
+  .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover:has(img) { display: block; }
   .card-body { padding: clamp(20px, 3vw, 30px); }
   .meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
   .card h3 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; margin: 0 0 10px; }
@@ -213,7 +215,7 @@
       </div>
       <div class="latest-grid">
         <a href="/journal/how-to-find-a-business-idea-that-actually-works.html" class="card card-feature c-business">
-          <div class="cover" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#logo"/></svg></div>
+          <div class="cover"><img src="https://images.unsplash.com/photo-1488748809185-53ad203ca5cf?fm=jpg&amp;q=75&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Person writing ideas by hand in a notebook" loading="lazy"></div>
           <div class="card-body">
             <div class="meta"><span class="tag">Business</span><span>8 minute read</span></div>
             <h3>How to Find a Business Idea That Actually Works</h3>
